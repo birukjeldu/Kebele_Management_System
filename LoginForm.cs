@@ -26,7 +26,8 @@ namespace Kebele_Management_System
 
         private void register_btn_Click(object sender, EventArgs e)
         {
-
+            RegestarationForm reg = new RegestarationForm();
+            reg.ShowDialog();
         }
     }
 }
