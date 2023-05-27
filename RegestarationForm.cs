@@ -17,6 +17,5 @@ namespace Kebele_Management_System
         {
             InitializeComponent();
         }
-
     }
 }
