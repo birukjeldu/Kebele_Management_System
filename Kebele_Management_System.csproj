@@ -68,6 +68,12 @@
     <Compile Include="AdminPanelForm.Designer.cs">
       <DependentUpon>AdminPanelForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSetting.Designer.cs">
+      <DependentUpon>AdminSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="BirthCardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </Compile>
     <EmbeddedResource Include="AdminPanelForm.resx">
       <DependentUpon>AdminPanelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSetting.resx">
+      <DependentUpon>AdminSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BirthCardForm.resx">
       <DependentUpon>BirthCardForm.cs</DependentUpon>
