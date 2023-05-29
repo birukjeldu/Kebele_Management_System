@@ -100,6 +100,12 @@
     <Compile Include="RegisteredUsers.Designer.cs">
       <DependentUpon>RegisteredUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="WaitingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitingList.Designer.cs">
+      <DependentUpon>WaitingList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminPanelForm.resx">
       <DependentUpon>AdminPanelForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisteredUsers.resx">
       <DependentUpon>RegisteredUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitingList.resx">
+      <DependentUpon>WaitingList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
