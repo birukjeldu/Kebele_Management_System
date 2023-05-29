@@ -94,6 +94,12 @@
     <Compile Include="RegestarationForm.Designer.cs">
       <DependentUpon>RegestarationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisteredUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisteredUsers.Designer.cs">
+      <DependentUpon>RegisteredUsers.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminPanelForm.resx">
       <DependentUpon>AdminPanelForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="RegestarationForm.resx">
       <DependentUpon>RegestarationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisteredUsers.resx">
+      <DependentUpon>RegisteredUsers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
