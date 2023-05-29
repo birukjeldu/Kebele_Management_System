@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanelForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.mainpane = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.dashboardLabel = new System.Windows.Forms.Label();
+            this.registeredLabel = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.waaitingLabel = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.settingLabel = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -56,13 +56,13 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.settingLabel);
             this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.waaitingLabel);
             this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.registeredLabel);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.dashboardLabel);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -71,14 +71,14 @@
             this.panel1.Size = new System.Drawing.Size(233, 619);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // mainpane
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(233, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(864, 619);
-            this.panel2.TabIndex = 1;
+            this.mainpane.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.mainpane.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainpane.Location = new System.Drawing.Point(233, 0);
+            this.mainpane.Name = "mainpane";
+            this.mainpane.Size = new System.Drawing.Size(864, 619);
+            this.mainpane.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -120,29 +120,29 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // label2
+            // dashboardLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Roboto Light", 15F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(67, 222);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Dashboard";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.dashboardLabel.AutoSize = true;
+            this.dashboardLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashboardLabel.Font = new System.Drawing.Font("Roboto Light", 15F);
+            this.dashboardLabel.ForeColor = System.Drawing.Color.Black;
+            this.dashboardLabel.Location = new System.Drawing.Point(67, 222);
+            this.dashboardLabel.Name = "dashboardLabel";
+            this.dashboardLabel.Size = new System.Drawing.Size(106, 24);
+            this.dashboardLabel.TabIndex = 3;
+            this.dashboardLabel.Text = "Dashboard";
+            this.dashboardLabel.Click += new System.EventHandler(this.dashboardLabel_Click);
             // 
-            // label3
+            // registeredLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Roboto Light", 15F);
-            this.label3.Location = new System.Drawing.Point(67, 270);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 24);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Registered Users";
+            this.registeredLabel.AutoSize = true;
+            this.registeredLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registeredLabel.Font = new System.Drawing.Font("Roboto Light", 15F);
+            this.registeredLabel.Location = new System.Drawing.Point(67, 270);
+            this.registeredLabel.Name = "registeredLabel";
+            this.registeredLabel.Size = new System.Drawing.Size(157, 24);
+            this.registeredLabel.TabIndex = 5;
+            this.registeredLabel.Text = "Registered Users";
             // 
             // pictureBox3
             // 
@@ -154,16 +154,16 @@
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
-            // label4
+            // waaitingLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Roboto Light", 15F);
-            this.label4.Location = new System.Drawing.Point(69, 321);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 24);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Waiting List";
+            this.waaitingLabel.AutoSize = true;
+            this.waaitingLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.waaitingLabel.Font = new System.Drawing.Font("Roboto Light", 15F);
+            this.waaitingLabel.Location = new System.Drawing.Point(69, 321);
+            this.waaitingLabel.Name = "waaitingLabel";
+            this.waaitingLabel.Size = new System.Drawing.Size(111, 24);
+            this.waaitingLabel.TabIndex = 5;
+            this.waaitingLabel.Text = "Waiting List";
             // 
             // pictureBox4
             // 
@@ -175,16 +175,16 @@
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             // 
-            // label5
+            // settingLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Roboto Light", 15F);
-            this.label5.Location = new System.Drawing.Point(69, 370);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 24);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Setting";
+            this.settingLabel.AutoSize = true;
+            this.settingLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.settingLabel.Font = new System.Drawing.Font("Roboto Light", 15F);
+            this.settingLabel.Location = new System.Drawing.Point(69, 370);
+            this.settingLabel.Name = "settingLabel";
+            this.settingLabel.Size = new System.Drawing.Size(70, 24);
+            this.settingLabel.TabIndex = 7;
+            this.settingLabel.Text = "Setting";
             // 
             // pictureBox5
             // 
@@ -214,7 +214,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1097, 619);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.mainpane);
             this.Controls.Add(this.panel1);
             this.Name = "AdminPanelForm";
             this.Text = "AdminPanelForm";
@@ -234,17 +234,17 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel mainpane;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label dashboardLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label registeredLabel;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label waaitingLabel;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label settingLabel;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button1;
     }

@@ -15,16 +15,28 @@ namespace Kebele_Management_System
         public AdminPanelForm()
         {
             InitializeComponent();
+            loadForm(new Dashboard());
+            dashboardLabel.ForeColor = SystemColors.Highlight;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        public void loadForm(object Form)
         {
-
+            if(this.mainpane.Controls.Count > 0)
+            {
+                this.mainpane.Controls.RemoveAt(0);
+            }
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.mainpane.Controls.Add(f);
+            this.mainpane.Tag = f;
+            f.Show();
         }
 
-        private void menuOnMouseHover(object sender, EventArgs e)
+        private void dashboardLabel_Click(object sender, EventArgs e)
         {
-            label1.BackColor = SystemColors.ButtonHighlight;
+            loadForm(new Dashboard());
+            dashboardLabel.ForeColor = SystemColors.Highlight;
         }
     }
 }
