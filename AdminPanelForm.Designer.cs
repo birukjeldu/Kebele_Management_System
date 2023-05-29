@@ -38,7 +38,7 @@
             this.dashboardLabel = new System.Windows.Forms.Label();
             this.registeredLabel = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.waaitingLabel = new System.Windows.Forms.Label();
+            this.waitingLabel = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.settingLabel = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -58,7 +58,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.settingLabel);
             this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.waaitingLabel);
+            this.panel1.Controls.Add(this.waitingLabel);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.registeredLabel);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -125,7 +125,7 @@
             this.dashboardLabel.AutoSize = true;
             this.dashboardLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dashboardLabel.Font = new System.Drawing.Font("Roboto Light", 15F);
-            this.dashboardLabel.ForeColor = System.Drawing.Color.Black;
+            this.dashboardLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dashboardLabel.Location = new System.Drawing.Point(67, 222);
             this.dashboardLabel.Name = "dashboardLabel";
             this.dashboardLabel.Size = new System.Drawing.Size(106, 24);
@@ -143,6 +143,7 @@
             this.registeredLabel.Size = new System.Drawing.Size(157, 24);
             this.registeredLabel.TabIndex = 5;
             this.registeredLabel.Text = "Registered Users";
+            this.registeredLabel.Click += new System.EventHandler(this.registeredLabel_Click);
             // 
             // pictureBox3
             // 
@@ -154,16 +155,17 @@
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
-            // waaitingLabel
+            // waitingLabel
             // 
-            this.waaitingLabel.AutoSize = true;
-            this.waaitingLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.waaitingLabel.Font = new System.Drawing.Font("Roboto Light", 15F);
-            this.waaitingLabel.Location = new System.Drawing.Point(69, 321);
-            this.waaitingLabel.Name = "waaitingLabel";
-            this.waaitingLabel.Size = new System.Drawing.Size(111, 24);
-            this.waaitingLabel.TabIndex = 5;
-            this.waaitingLabel.Text = "Waiting List";
+            this.waitingLabel.AutoSize = true;
+            this.waitingLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.waitingLabel.Font = new System.Drawing.Font("Roboto Light", 15F);
+            this.waitingLabel.Location = new System.Drawing.Point(69, 321);
+            this.waitingLabel.Name = "waitingLabel";
+            this.waitingLabel.Size = new System.Drawing.Size(111, 24);
+            this.waitingLabel.TabIndex = 5;
+            this.waitingLabel.Text = "Waiting List";
+            this.waitingLabel.Click += new System.EventHandler(this.waaitingLabel_Click);
             // 
             // pictureBox4
             // 
@@ -185,6 +187,7 @@
             this.settingLabel.Size = new System.Drawing.Size(70, 24);
             this.settingLabel.TabIndex = 7;
             this.settingLabel.Text = "Setting";
+            this.settingLabel.Click += new System.EventHandler(this.settingLabel_Click);
             // 
             // pictureBox5
             // 
@@ -242,7 +245,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label registeredLabel;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label waaitingLabel;
+        private System.Windows.Forms.Label waitingLabel;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label settingLabel;
         private System.Windows.Forms.PictureBox pictureBox5;

@@ -37,6 +37,36 @@ namespace Kebele_Management_System
         {
             loadForm(new Dashboard());
             dashboardLabel.ForeColor = SystemColors.Highlight;
+            registeredLabel.ForeColor = SystemColors.ActiveCaptionText;
+            waitingLabel.ForeColor = SystemColors.ActiveCaptionText;
+            settingLabel.ForeColor = SystemColors.ActiveCaptionText;
+        }
+
+        private void registeredLabel_Click(object sender, EventArgs e)
+        {
+            loadForm(new RegisteredUsers());
+            registeredLabel.ForeColor = SystemColors.Highlight;
+            dashboardLabel.ForeColor = SystemColors.ActiveCaptionText;
+            waitingLabel.ForeColor = SystemColors.ActiveCaptionText;
+            settingLabel.ForeColor = SystemColors.ActiveCaptionText;
+        }
+
+        private void waaitingLabel_Click(object sender, EventArgs e)
+        {
+            loadForm(new WaitingList());
+            waitingLabel.ForeColor = SystemColors.Highlight;
+            registeredLabel.ForeColor = SystemColors.ActiveCaptionText;
+            dashboardLabel.ForeColor = SystemColors.ActiveCaptionText;
+            settingLabel.ForeColor = SystemColors.ActiveCaptionText;
+        }
+
+        private void settingLabel_Click(object sender, EventArgs e)
+        {
+            loadForm(new AdminSetting());
+            settingLabel.ForeColor = SystemColors.Highlight;
+            waitingLabel.ForeColor = SystemColors.ActiveCaptionText;
+            registeredLabel.ForeColor = SystemColors.ActiveCaptionText;
+            dashboardLabel.ForeColor = SystemColors.ActiveCaptionText;
         }
     }
 }
