@@ -21,5 +21,10 @@ namespace Kebele_Management_System
         {
 
         }
+
+        private void menuOnMouseHover(object sender, EventArgs e)
+        {
+            label1.BackColor = SystemColors.ButtonHighlight;
+        }
     }
 }
