@@ -10,7 +10,7 @@ namespace Kebele_Management_System
 {
     internal class DB_Connection
     {
-        public static void Mainjnn(String[] args) // 
+        public static void Mainjnn(String[] args) 
         {
             try
             {
