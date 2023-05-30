@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Kebele_Management_System
 {
@@ -11,7 +12,9 @@ namespace Kebele_Management_System
         //isValidName
         internal bool isValidName(string name)
         {
-            return true;
+            Regex regex = new Regex(@"^[a-zA-Z\s]+$");
+            if (regex.IsMatch(name)) return true;
+            else return false;
         }
         //isEmptyText
         internal bool isEmptyText(string text) { 
@@ -21,17 +24,17 @@ namespace Kebele_Management_System
         //isValidPhoneNumber
         internal bool isValidPhoneNumber(string phoneNumber)
         {
-            return true;
+            Regex regex = new Regex(@"^+251[1-59]\d{8}$");
+            if (regex.IsMatch(phoneNumber)) return true;
+            else return false;
+            
         }
         //isValidEmail
         internal bool isValidEmail(string email)
         {
-            return true;
-        }
-        //isEmptyComboBox
-        internal bool isEmptyComboBox(string CB)
-        {
-            return true;
+            Regex regex = new Regex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
+            if (regex.IsMatch(email)) return true;
+            else return false;
         }
     }
 }

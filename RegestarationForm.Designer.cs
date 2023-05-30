@@ -36,9 +36,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.personalInfo = new System.Windows.Forms.GroupBox();
+            this.register_btn = new System.Windows.Forms.Button();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.kebele_CB = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.maritalBox = new System.Windows.Forms.GroupBox();
             this.martial_married = new System.Windows.Forms.RadioButton();
             this.martial_single = new System.Windows.Forms.RadioButton();
             this.label33 = new System.Windows.Forms.Label();
@@ -89,19 +96,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.firstName_TB = new System.Windows.Forms.TextBox();
             this.fullName_label = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.kebele_CB = new System.Windows.Forms.ComboBox();
-            this.register_btn = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.personalInfo.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.maritalBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.house_number)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_month)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_year)).BeginInit();
@@ -175,7 +175,7 @@
             this.personalInfo.Controls.Add(this.kebele_CB);
             this.personalInfo.Controls.Add(this.label37);
             this.personalInfo.Controls.Add(this.label36);
-            this.personalInfo.Controls.Add(this.groupBox2);
+            this.personalInfo.Controls.Add(this.maritalBox);
             this.personalInfo.Controls.Add(this.label33);
             this.personalInfo.Controls.Add(this.label32);
             this.personalInfo.Controls.Add(this.label31);
@@ -232,6 +232,98 @@
             this.personalInfo.TabStop = false;
             this.personalInfo.Text = "Personal Information";
             // 
+            // register_btn
+            // 
+            this.register_btn.BackColor = System.Drawing.Color.SeaGreen;
+            this.register_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.register_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
+            this.register_btn.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.register_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.register_btn.Location = new System.Drawing.Point(237, 487);
+            this.register_btn.Name = "register_btn";
+            this.register_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.register_btn.Size = new System.Drawing.Size(186, 46);
+            this.register_btn.TabIndex = 106;
+            this.register_btn.Text = "Submit";
+            this.register_btn.UseVisualStyleBackColor = false;
+            this.register_btn.Click += new System.EventHandler(this.register_btn_Click);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label38.ForeColor = System.Drawing.Color.Red;
+            this.label38.Location = new System.Drawing.Point(732, 269);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(15, 20);
+            this.label38.TabIndex = 105;
+            this.label38.Text = "*";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Transparent;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label35.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label35.Location = new System.Drawing.Point(882, 37);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(86, 18);
+            this.label35.TabIndex = 53;
+            this.label35.Text = "are required";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label34.ForeColor = System.Drawing.Color.Red;
+            this.label34.Location = new System.Drawing.Point(865, 37);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(15, 20);
+            this.label34.TabIndex = 52;
+            this.label34.Text = "*";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Font = new System.Drawing.Font("Roboto", 12F);
+            this.label39.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label39.Location = new System.Drawing.Point(677, 270);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(60, 19);
+            this.label39.TabIndex = 104;
+            this.label39.Text = "Kebele:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label20.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label20.Location = new System.Drawing.Point(771, 37);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(96, 18);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "All inputs with";
+            // 
+            // kebele_CB
+            // 
+            this.kebele_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.kebele_CB.FormattingEnabled = true;
+            this.kebele_CB.Items.AddRange(new object[] {
+            "Ethiopian",
+            "Kenyan",
+            "Algerian",
+            "American",
+            "Somalian",
+            "Ertirean"});
+            this.kebele_CB.Location = new System.Drawing.Point(681, 292);
+            this.kebele_CB.Name = "kebele_CB";
+            this.kebele_CB.Size = new System.Drawing.Size(186, 28);
+            this.kebele_CB.TabIndex = 103;
+            // 
             // label37
             // 
             this.label37.AutoSize = true;
@@ -256,16 +348,16 @@
             this.label36.TabIndex = 101;
             this.label36.Text = "*";
             // 
-            // groupBox2
+            // maritalBox
             // 
-            this.groupBox2.Controls.Add(this.martial_married);
-            this.groupBox2.Controls.Add(this.martial_single);
-            this.groupBox2.Location = new System.Drawing.Point(451, 165);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(186, 80);
-            this.groupBox2.TabIndex = 100;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Martial Status";
+            this.maritalBox.Controls.Add(this.martial_married);
+            this.maritalBox.Controls.Add(this.martial_single);
+            this.maritalBox.Location = new System.Drawing.Point(451, 165);
+            this.maritalBox.Name = "maritalBox";
+            this.maritalBox.Size = new System.Drawing.Size(186, 80);
+            this.maritalBox.TabIndex = 100;
+            this.maritalBox.TabStop = false;
+            this.maritalBox.Text = "Martial Status";
             // 
             // martial_married
             // 
@@ -893,100 +985,10 @@
             this.fullName_label.TabIndex = 52;
             this.fullName_label.Text = "First Name:";
             // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label35.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label35.Location = new System.Drawing.Point(882, 37);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(86, 18);
-            this.label35.TabIndex = 53;
-            this.label35.Text = "are required";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label34.ForeColor = System.Drawing.Color.Red;
-            this.label34.Location = new System.Drawing.Point(865, 37);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(15, 20);
-            this.label34.TabIndex = 52;
-            this.label34.Text = "*";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label20.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label20.Location = new System.Drawing.Point(771, 37);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(96, 18);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "All inputs with";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label38.ForeColor = System.Drawing.Color.Red;
-            this.label38.Location = new System.Drawing.Point(704, 269);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(15, 20);
-            this.label38.TabIndex = 105;
-            this.label38.Text = "*";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Transparent;
-            this.label39.Font = new System.Drawing.Font("Roboto", 12F);
-            this.label39.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label39.Location = new System.Drawing.Point(650, 270);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(60, 19);
-            this.label39.TabIndex = 104;
-            this.label39.Text = "Kebele:";
-            // 
-            // kebele_CB
-            // 
-            this.kebele_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.kebele_CB.FormattingEnabled = true;
-            this.kebele_CB.Items.AddRange(new object[] {
-            "Ethiopian",
-            "Kenyan",
-            "Algerian",
-            "American",
-            "Somalian",
-            "Ertirean"});
-            this.kebele_CB.Location = new System.Drawing.Point(654, 292);
-            this.kebele_CB.Name = "kebele_CB";
-            this.kebele_CB.Size = new System.Drawing.Size(186, 28);
-            this.kebele_CB.TabIndex = 103;
-            // 
-            // register_btn
-            // 
-            this.register_btn.BackColor = System.Drawing.Color.SeaGreen;
-            this.register_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.register_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
-            this.register_btn.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.register_btn.Location = new System.Drawing.Point(237, 487);
-            this.register_btn.Name = "register_btn";
-            this.register_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.register_btn.Size = new System.Drawing.Size(186, 46);
-            this.register_btn.TabIndex = 106;
-            this.register_btn.Text = "Submit";
-            this.register_btn.UseVisualStyleBackColor = false;
-            this.register_btn.Click += new System.EventHandler(this.register_btn_Click);
-            // 
             // errorProvider
             // 
+            this.errorProvider.BlinkRate = 100;
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
             // RegestarationForm
@@ -1005,8 +1007,8 @@
             this.panel2.ResumeLayout(false);
             this.personalInfo.ResumeLayout(false);
             this.personalInfo.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.maritalBox.ResumeLayout(false);
+            this.maritalBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.house_number)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_month)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_year)).EndInit();
@@ -1075,7 +1077,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox firstName_TB;
         private System.Windows.Forms.Label fullName_label;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox maritalBox;
         private System.Windows.Forms.RadioButton martial_single;
         private System.Windows.Forms.RadioButton martial_married;
         private System.Windows.Forms.Label label36;
