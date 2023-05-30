@@ -68,5 +68,10 @@ namespace Kebele_Management_System
             registeredLabel.ForeColor = SystemColors.ActiveCaptionText;
             dashboardLabel.ForeColor = SystemColors.ActiveCaptionText;
         }
+
+        private void AdminPanelForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

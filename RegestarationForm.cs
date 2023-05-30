@@ -17,5 +17,15 @@ namespace Kebele_Management_System
         {
             InitializeComponent();
         }
+
+        private void register_btn_Click(object sender, EventArgs e)
+        {
+            Validator v = new Validator();
+            bool allValid = true;
+            if (v.isEmptyText("sdfdsf"))
+            {
+                errorProvider.SetError(firstName_TB, "Empty form please re wirte bithc");
+            }
+        }
     }
 }

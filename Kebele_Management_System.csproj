@@ -106,6 +106,7 @@
     <Compile Include="RegisteredUsers.Designer.cs">
       <DependentUpon>RegisteredUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validator.cs" />
     <Compile Include="WaitingList.cs">
       <SubType>Form</SubType>
     </Compile>

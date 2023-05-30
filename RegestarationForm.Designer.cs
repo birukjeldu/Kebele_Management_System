@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegestarationForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.personalInfo = new System.Windows.Forms.GroupBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.martial_married = new System.Windows.Forms.RadioButton();
+            this.martial_single = new System.Windows.Forms.RadioButton();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -48,53 +54,59 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.occupation = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.bloodType_CB = new System.Windows.Forms.ComboBox();
+            this.password = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.phoneNumber = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.house_number = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.wereda_CB = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.zone_CB = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.region_CB = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.nationality = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.sex = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.birth_month = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.birth_year = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.birth_day = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.grandFatherName_TB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.fatherName_TB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.firstName_TB = new System.Windows.Forms.TextBox();
             this.fullName_label = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.kebele_CB = new System.Windows.Forms.ComboBox();
             this.register_btn = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.personalInfo.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.house_number)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birth_month)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birth_year)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birth_day)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,7 +136,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(385, 42);
+            this.label2.Location = new System.Drawing.Point(379, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(423, 23);
             this.label2.TabIndex = 1;
@@ -135,20 +147,16 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(339, 9);
+            this.label1.Location = new System.Drawing.Point(368, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(510, 33);
+            this.label1.Size = new System.Drawing.Size(448, 33);
             this.label1.TabIndex = 0;
-            this.label1.Text = "የባህርዳር ከተማ ነዋሪ የቀበሌ መታወቂያ ፎርም ቅጽ";
+            this.label1.Text = "የኢትዮጵያ ነዋሪ የቀበሌ መታወቂያ ፎርም ቅጽ";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.label35);
-            this.panel2.Controls.Add(this.label34);
-            this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.register_btn);
+            this.panel2.Controls.Add(this.personalInfo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.panel2.Location = new System.Drawing.Point(0, 82);
@@ -156,63 +164,134 @@
             this.panel2.Size = new System.Drawing.Size(1129, 585);
             this.panel2.TabIndex = 1;
             // 
-            // groupBox1
+            // personalInfo
             // 
-            this.groupBox1.Controls.Add(this.label33);
-            this.groupBox1.Controls.Add(this.label32);
-            this.groupBox1.Controls.Add(this.label31);
-            this.groupBox1.Controls.Add(this.label30);
-            this.groupBox1.Controls.Add(this.label29);
-            this.groupBox1.Controls.Add(this.label28);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.comboBox6);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.numericUpDown4);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.numericUpDown3);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.fullName_label);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(34, 27);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(658, 469);
-            this.groupBox1.TabIndex = 54;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Personal Information";
+            this.personalInfo.Controls.Add(this.register_btn);
+            this.personalInfo.Controls.Add(this.label38);
+            this.personalInfo.Controls.Add(this.label35);
+            this.personalInfo.Controls.Add(this.label34);
+            this.personalInfo.Controls.Add(this.label39);
+            this.personalInfo.Controls.Add(this.label20);
+            this.personalInfo.Controls.Add(this.kebele_CB);
+            this.personalInfo.Controls.Add(this.label37);
+            this.personalInfo.Controls.Add(this.label36);
+            this.personalInfo.Controls.Add(this.groupBox2);
+            this.personalInfo.Controls.Add(this.label33);
+            this.personalInfo.Controls.Add(this.label32);
+            this.personalInfo.Controls.Add(this.label31);
+            this.personalInfo.Controls.Add(this.label30);
+            this.personalInfo.Controls.Add(this.label29);
+            this.personalInfo.Controls.Add(this.label28);
+            this.personalInfo.Controls.Add(this.label27);
+            this.personalInfo.Controls.Add(this.label26);
+            this.personalInfo.Controls.Add(this.label25);
+            this.personalInfo.Controls.Add(this.label24);
+            this.personalInfo.Controls.Add(this.label23);
+            this.personalInfo.Controls.Add(this.label22);
+            this.personalInfo.Controls.Add(this.label21);
+            this.personalInfo.Controls.Add(this.occupation);
+            this.personalInfo.Controls.Add(this.label19);
+            this.personalInfo.Controls.Add(this.label18);
+            this.personalInfo.Controls.Add(this.bloodType_CB);
+            this.personalInfo.Controls.Add(this.password);
+            this.personalInfo.Controls.Add(this.label17);
+            this.personalInfo.Controls.Add(this.email);
+            this.personalInfo.Controls.Add(this.label16);
+            this.personalInfo.Controls.Add(this.phoneNumber);
+            this.personalInfo.Controls.Add(this.label15);
+            this.personalInfo.Controls.Add(this.house_number);
+            this.personalInfo.Controls.Add(this.label14);
+            this.personalInfo.Controls.Add(this.label13);
+            this.personalInfo.Controls.Add(this.wereda_CB);
+            this.personalInfo.Controls.Add(this.label12);
+            this.personalInfo.Controls.Add(this.zone_CB);
+            this.personalInfo.Controls.Add(this.label11);
+            this.personalInfo.Controls.Add(this.region_CB);
+            this.personalInfo.Controls.Add(this.label10);
+            this.personalInfo.Controls.Add(this.nationality);
+            this.personalInfo.Controls.Add(this.label9);
+            this.personalInfo.Controls.Add(this.sex);
+            this.personalInfo.Controls.Add(this.label8);
+            this.personalInfo.Controls.Add(this.birth_month);
+            this.personalInfo.Controls.Add(this.label7);
+            this.personalInfo.Controls.Add(this.birth_year);
+            this.personalInfo.Controls.Add(this.label6);
+            this.personalInfo.Controls.Add(this.birth_day);
+            this.personalInfo.Controls.Add(this.label3);
+            this.personalInfo.Controls.Add(this.grandFatherName_TB);
+            this.personalInfo.Controls.Add(this.label5);
+            this.personalInfo.Controls.Add(this.fatherName_TB);
+            this.personalInfo.Controls.Add(this.label4);
+            this.personalInfo.Controls.Add(this.firstName_TB);
+            this.personalInfo.Controls.Add(this.fullName_label);
+            this.personalInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.personalInfo.Location = new System.Drawing.Point(34, 27);
+            this.personalInfo.Name = "personalInfo";
+            this.personalInfo.Size = new System.Drawing.Size(1052, 546);
+            this.personalInfo.TabIndex = 54;
+            this.personalInfo.TabStop = false;
+            this.personalInfo.Text = "Personal Information";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label37.ForeColor = System.Drawing.Color.Red;
+            this.label37.Location = new System.Drawing.Point(129, 405);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(15, 20);
+            this.label37.TabIndex = 102;
+            this.label37.Text = "*";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label36.ForeColor = System.Drawing.Color.Red;
+            this.label36.Location = new System.Drawing.Point(560, 165);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(15, 20);
+            this.label36.TabIndex = 101;
+            this.label36.Text = "*";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.martial_married);
+            this.groupBox2.Controls.Add(this.martial_single);
+            this.groupBox2.Location = new System.Drawing.Point(451, 165);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(186, 80);
+            this.groupBox2.TabIndex = 100;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Martial Status";
+            // 
+            // martial_married
+            // 
+            this.martial_married.AutoSize = true;
+            this.martial_married.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.martial_married.Location = new System.Drawing.Point(86, 42);
+            this.martial_married.Name = "martial_married";
+            this.martial_married.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.martial_married.Size = new System.Drawing.Size(80, 24);
+            this.martial_married.TabIndex = 1;
+            this.martial_married.TabStop = true;
+            this.martial_married.Text = "Married";
+            this.martial_married.UseVisualStyleBackColor = true;
+            // 
+            // martial_single
+            // 
+            this.martial_single.AutoSize = true;
+            this.martial_single.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.martial_single.Location = new System.Drawing.Point(7, 42);
+            this.martial_single.Name = "martial_single";
+            this.martial_single.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.martial_single.Size = new System.Drawing.Size(71, 24);
+            this.martial_single.TabIndex = 0;
+            this.martial_single.TabStop = true;
+            this.martial_single.Text = "Single";
+            this.martial_single.UseVisualStyleBackColor = true;
             // 
             // label33
             // 
@@ -370,13 +449,13 @@
             this.label21.TabIndex = 87;
             this.label21.Text = "*";
             // 
-            // textBox7
+            // occupation
             // 
-            this.textBox7.Font = new System.Drawing.Font("Roboto", 13F);
-            this.textBox7.Location = new System.Drawing.Point(237, 363);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(186, 28);
-            this.textBox7.TabIndex = 86;
+            this.occupation.Font = new System.Drawing.Font("Roboto", 13F);
+            this.occupation.Location = new System.Drawing.Point(237, 363);
+            this.occupation.Name = "occupation";
+            this.occupation.Size = new System.Drawing.Size(186, 28);
+            this.occupation.TabIndex = 86;
             // 
             // label19
             // 
@@ -402,11 +481,11 @@
             this.label18.TabIndex = 84;
             this.label18.Text = "Blood Type:";
             // 
-            // comboBox6
+            // bloodType_CB
             // 
-            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.bloodType_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.bloodType_CB.FormattingEnabled = true;
+            this.bloodType_CB.Items.AddRange(new object[] {
             "A+",
             "A-",
             "B+",
@@ -415,18 +494,18 @@
             "O-",
             "AB+",
             "AB-"});
-            this.comboBox6.Location = new System.Drawing.Point(451, 363);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(186, 28);
-            this.comboBox6.TabIndex = 83;
+            this.bloodType_CB.Location = new System.Drawing.Point(451, 363);
+            this.bloodType_CB.Name = "bloodType_CB";
+            this.bloodType_CB.Size = new System.Drawing.Size(186, 28);
+            this.bloodType_CB.TabIndex = 83;
             // 
-            // textBox6
+            // password
             // 
-            this.textBox6.Font = new System.Drawing.Font("Roboto", 13F);
-            this.textBox6.Location = new System.Drawing.Point(451, 428);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(186, 28);
-            this.textBox6.TabIndex = 82;
+            this.password.Font = new System.Drawing.Font("Roboto", 13F);
+            this.password.Location = new System.Drawing.Point(451, 428);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(186, 28);
+            this.password.TabIndex = 82;
             // 
             // label17
             // 
@@ -440,13 +519,13 @@
             this.label17.TabIndex = 81;
             this.label17.Text = "Password:";
             // 
-            // textBox5
+            // email
             // 
-            this.textBox5.Font = new System.Drawing.Font("Roboto", 13F);
-            this.textBox5.Location = new System.Drawing.Point(237, 428);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(186, 28);
-            this.textBox5.TabIndex = 80;
+            this.email.Font = new System.Drawing.Font("Roboto", 13F);
+            this.email.Location = new System.Drawing.Point(237, 428);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(186, 28);
+            this.email.TabIndex = 80;
             // 
             // label16
             // 
@@ -460,13 +539,13 @@
             this.label16.TabIndex = 79;
             this.label16.Text = "E-mail:";
             // 
-            // textBox2
+            // phoneNumber
             // 
-            this.textBox2.Font = new System.Drawing.Font("Roboto", 13F);
-            this.textBox2.Location = new System.Drawing.Point(21, 428);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 28);
-            this.textBox2.TabIndex = 78;
+            this.phoneNumber.Font = new System.Drawing.Font("Roboto", 13F);
+            this.phoneNumber.Location = new System.Drawing.Point(21, 428);
+            this.phoneNumber.Name = "phoneNumber";
+            this.phoneNumber.Size = new System.Drawing.Size(186, 28);
+            this.phoneNumber.TabIndex = 78;
             // 
             // label15
             // 
@@ -480,13 +559,13 @@
             this.label15.TabIndex = 77;
             this.label15.Text = "Phone Number:";
             // 
-            // numericUpDown4
+            // house_number
             // 
-            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.numericUpDown4.Location = new System.Drawing.Point(21, 365);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(186, 26);
-            this.numericUpDown4.TabIndex = 76;
+            this.house_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.house_number.Location = new System.Drawing.Point(21, 365);
+            this.house_number.Name = "house_number";
+            this.house_number.Size = new System.Drawing.Size(186, 26);
+            this.house_number.TabIndex = 76;
             // 
             // label14
             // 
@@ -512,21 +591,21 @@
             this.label13.TabIndex = 74;
             this.label13.Text = "Wereda:";
             // 
-            // comboBox5
+            // wereda_CB
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.wereda_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.wereda_CB.FormattingEnabled = true;
+            this.wereda_CB.Items.AddRange(new object[] {
             "Ethiopian",
             "Kenyan",
             "Algerian",
             "American",
             "Somalian",
             "Ertirean"});
-            this.comboBox5.Location = new System.Drawing.Point(451, 292);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(186, 28);
-            this.comboBox5.TabIndex = 73;
+            this.wereda_CB.Location = new System.Drawing.Point(451, 292);
+            this.wereda_CB.Name = "wereda_CB";
+            this.wereda_CB.Size = new System.Drawing.Size(186, 28);
+            this.wereda_CB.TabIndex = 73;
             // 
             // label12
             // 
@@ -540,21 +619,21 @@
             this.label12.TabIndex = 72;
             this.label12.Text = "Zone:";
             // 
-            // comboBox4
+            // zone_CB
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.zone_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.zone_CB.FormattingEnabled = true;
+            this.zone_CB.Items.AddRange(new object[] {
             "Ethiopian",
             "Kenyan",
             "Algerian",
             "American",
             "Somalian",
             "Ertirean"});
-            this.comboBox4.Location = new System.Drawing.Point(237, 292);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(186, 28);
-            this.comboBox4.TabIndex = 71;
+            this.zone_CB.Location = new System.Drawing.Point(237, 292);
+            this.zone_CB.Name = "zone_CB";
+            this.zone_CB.Size = new System.Drawing.Size(186, 28);
+            this.zone_CB.TabIndex = 71;
             // 
             // label11
             // 
@@ -568,11 +647,11 @@
             this.label11.TabIndex = 70;
             this.label11.Text = "Region:";
             // 
-            // comboBox3
+            // region_CB
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.region_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.region_CB.FormattingEnabled = true;
+            this.region_CB.Items.AddRange(new object[] {
             "Addis Ababa",
             "Afar",
             "Amhara",
@@ -585,10 +664,10 @@
             "Somali",
             "Southern Nations, Nationalities, and Peoples\'",
             "Tigray"});
-            this.comboBox3.Location = new System.Drawing.Point(21, 292);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(186, 28);
-            this.comboBox3.TabIndex = 69;
+            this.region_CB.Location = new System.Drawing.Point(21, 292);
+            this.region_CB.Name = "region_CB";
+            this.region_CB.Size = new System.Drawing.Size(186, 28);
+            this.region_CB.TabIndex = 69;
             // 
             // label10
             // 
@@ -602,21 +681,21 @@
             this.label10.TabIndex = 68;
             this.label10.Text = "Nationality:";
             // 
-            // comboBox2
+            // nationality
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.nationality.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.nationality.FormattingEnabled = true;
+            this.nationality.Items.AddRange(new object[] {
             "Ethiopian",
             "Kenyan",
             "Algerian",
             "American",
             "Somalian",
             "Ertirean"});
-            this.comboBox2.Location = new System.Drawing.Point(237, 217);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(186, 28);
-            this.comboBox2.TabIndex = 67;
+            this.nationality.Location = new System.Drawing.Point(237, 217);
+            this.nationality.Name = "nationality";
+            this.nationality.Size = new System.Drawing.Size(186, 28);
+            this.nationality.TabIndex = 67;
             // 
             // label9
             // 
@@ -630,17 +709,17 @@
             this.label9.TabIndex = 66;
             this.label9.Text = "Sex:";
             // 
-            // comboBox1
+            // sex
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.sex.FormattingEnabled = true;
+            this.sex.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(21, 217);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(186, 28);
-            this.comboBox1.TabIndex = 65;
+            this.sex.Location = new System.Drawing.Point(21, 217);
+            this.sex.Name = "sex";
+            this.sex.Size = new System.Drawing.Size(186, 28);
+            this.sex.TabIndex = 65;
             // 
             // label8
             // 
@@ -654,13 +733,23 @@
             this.label8.TabIndex = 64;
             this.label8.Text = "Month:";
             // 
-            // numericUpDown3
+            // birth_month
             // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.numericUpDown3.Location = new System.Drawing.Point(149, 152);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(58, 26);
-            this.numericUpDown3.TabIndex = 63;
+            this.birth_month.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.birth_month.Location = new System.Drawing.Point(149, 152);
+            this.birth_month.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.birth_month.Name = "birth_month";
+            this.birth_month.Size = new System.Drawing.Size(58, 26);
+            this.birth_month.TabIndex = 63;
+            this.birth_month.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label7
             // 
@@ -674,13 +763,28 @@
             this.label7.TabIndex = 62;
             this.label7.Text = "Year:";
             // 
-            // numericUpDown2
+            // birth_year
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.numericUpDown2.Location = new System.Drawing.Point(258, 152);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(84, 26);
-            this.numericUpDown2.TabIndex = 61;
+            this.birth_year.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.birth_year.Location = new System.Drawing.Point(258, 152);
+            this.birth_year.Maximum = new decimal(new int[] {
+            1997,
+            0,
+            0,
+            0});
+            this.birth_year.Minimum = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
+            this.birth_year.Name = "birth_year";
+            this.birth_year.Size = new System.Drawing.Size(84, 26);
+            this.birth_year.TabIndex = 61;
+            this.birth_year.Value = new decimal(new int[] {
+            1997,
+            0,
+            0,
+            0});
             // 
             // label6
             // 
@@ -694,13 +798,28 @@
             this.label6.TabIndex = 60;
             this.label6.Text = "Day:";
             // 
-            // numericUpDown1
+            // birth_day
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.numericUpDown1.Location = new System.Drawing.Point(49, 152);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(58, 26);
-            this.numericUpDown1.TabIndex = 59;
+            this.birth_day.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.birth_day.Location = new System.Drawing.Point(49, 152);
+            this.birth_day.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.birth_day.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.birth_day.Name = "birth_day";
+            this.birth_day.Size = new System.Drawing.Size(58, 26);
+            this.birth_day.TabIndex = 59;
+            this.birth_day.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label3
             // 
@@ -714,13 +833,13 @@
             this.label3.TabIndex = 58;
             this.label3.Text = "Date Of Birth";
             // 
-            // textBox4
+            // grandFatherName_TB
             // 
-            this.textBox4.Font = new System.Drawing.Font("Roboto", 13F);
-            this.textBox4.Location = new System.Drawing.Point(451, 60);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(186, 28);
-            this.textBox4.TabIndex = 57;
+            this.grandFatherName_TB.Font = new System.Drawing.Font("Roboto", 13F);
+            this.grandFatherName_TB.Location = new System.Drawing.Point(451, 60);
+            this.grandFatherName_TB.Name = "grandFatherName_TB";
+            this.grandFatherName_TB.Size = new System.Drawing.Size(186, 28);
+            this.grandFatherName_TB.TabIndex = 57;
             // 
             // label5
             // 
@@ -734,13 +853,13 @@
             this.label5.TabIndex = 56;
             this.label5.Text = "Grand Father\'s Name:";
             // 
-            // textBox3
+            // fatherName_TB
             // 
-            this.textBox3.Font = new System.Drawing.Font("Roboto", 13F);
-            this.textBox3.Location = new System.Drawing.Point(237, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 28);
-            this.textBox3.TabIndex = 55;
+            this.fatherName_TB.Font = new System.Drawing.Font("Roboto", 13F);
+            this.fatherName_TB.Location = new System.Drawing.Point(237, 60);
+            this.fatherName_TB.Name = "fatherName_TB";
+            this.fatherName_TB.Size = new System.Drawing.Size(186, 28);
+            this.fatherName_TB.TabIndex = 55;
             // 
             // label4
             // 
@@ -754,13 +873,13 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "Father\'s Name:";
             // 
-            // textBox1
+            // firstName_TB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 13F);
-            this.textBox1.Location = new System.Drawing.Point(21, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 28);
-            this.textBox1.TabIndex = 53;
+            this.firstName_TB.Font = new System.Drawing.Font("Roboto", 13F);
+            this.firstName_TB.Location = new System.Drawing.Point(21, 60);
+            this.firstName_TB.Name = "firstName_TB";
+            this.firstName_TB.Size = new System.Drawing.Size(186, 28);
+            this.firstName_TB.TabIndex = 53;
             // 
             // fullName_label
             // 
@@ -780,7 +899,7 @@
             this.label35.BackColor = System.Drawing.Color.Transparent;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label35.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label35.Location = new System.Drawing.Point(956, 67);
+            this.label35.Location = new System.Drawing.Point(882, 37);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(86, 18);
             this.label35.TabIndex = 53;
@@ -792,7 +911,7 @@
             this.label34.BackColor = System.Drawing.Color.Transparent;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label34.ForeColor = System.Drawing.Color.Red;
-            this.label34.Location = new System.Drawing.Point(939, 67);
+            this.label34.Location = new System.Drawing.Point(865, 37);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(15, 20);
             this.label34.TabIndex = 52;
@@ -804,25 +923,71 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label20.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label20.Location = new System.Drawing.Point(845, 67);
+            this.label20.Location = new System.Drawing.Point(771, 37);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(96, 18);
             this.label20.TabIndex = 0;
             this.label20.Text = "All inputs with";
             // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label38.ForeColor = System.Drawing.Color.Red;
+            this.label38.Location = new System.Drawing.Point(704, 269);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(15, 20);
+            this.label38.TabIndex = 105;
+            this.label38.Text = "*";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Font = new System.Drawing.Font("Roboto", 12F);
+            this.label39.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label39.Location = new System.Drawing.Point(650, 270);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(60, 19);
+            this.label39.TabIndex = 104;
+            this.label39.Text = "Kebele:";
+            // 
+            // kebele_CB
+            // 
+            this.kebele_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.kebele_CB.FormattingEnabled = true;
+            this.kebele_CB.Items.AddRange(new object[] {
+            "Ethiopian",
+            "Kenyan",
+            "Algerian",
+            "American",
+            "Somalian",
+            "Ertirean"});
+            this.kebele_CB.Location = new System.Drawing.Point(654, 292);
+            this.kebele_CB.Name = "kebele_CB";
+            this.kebele_CB.Size = new System.Drawing.Size(186, 28);
+            this.kebele_CB.TabIndex = 103;
+            // 
             // register_btn
             // 
             this.register_btn.BackColor = System.Drawing.Color.SeaGreen;
+            this.register_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.register_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
             this.register_btn.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.register_btn.Location = new System.Drawing.Point(271, 515);
+            this.register_btn.Location = new System.Drawing.Point(237, 487);
             this.register_btn.Name = "register_btn";
             this.register_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.register_btn.Size = new System.Drawing.Size(186, 46);
-            this.register_btn.TabIndex = 38;
+            this.register_btn.TabIndex = 106;
             this.register_btn.Text = "Submit";
             this.register_btn.UseVisualStyleBackColor = false;
+            this.register_btn.Click += new System.EventHandler(this.register_btn_Click);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // RegestarationForm
             // 
@@ -838,13 +1003,15 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.personalInfo.ResumeLayout(false);
+            this.personalInfo.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.house_number)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birth_month)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birth_year)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birth_day)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -856,11 +1023,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button register_btn;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox personalInfo;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
@@ -874,40 +1040,50 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox occupation;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ComboBox bloodType_CB;
+        private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox email;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox phoneNumber;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown house_number;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox wereda_CB;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox zone_CB;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox region_CB;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox nationality;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox sex;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown birth_month;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown birth_year;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown birth_day;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox grandFatherName_TB;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox fatherName_TB;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox firstName_TB;
         private System.Windows.Forms.Label fullName_label;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton martial_single;
+        private System.Windows.Forms.RadioButton martial_married;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox kebele_CB;
+        private System.Windows.Forms.Button register_btn;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
