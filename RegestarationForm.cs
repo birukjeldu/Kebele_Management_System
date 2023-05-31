@@ -10,11 +10,17 @@ using System.Windows.Forms;
 using Xceed.Wpf.Toolkit;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using MySql.Data.MySqlClient;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace Kebele_Management_System
 {
     public partial class RegestarationForm : Form
     {
+        //Creating a connnectin to the database 
+        private MySqlConnection connection;
+        private string connectionString = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
+
         public RegestarationForm()
         {
             InitializeComponent();
@@ -139,6 +145,137 @@ namespace Kebele_Management_System
             {
                 // If everything is Valid
                 Console.WriteLine("Done!!! Corecct!!!!");
+            }
+        }
+
+        private void RegestarationForm_Load(object sender, EventArgs e)
+        {
+            LoadRegions();
+        }
+
+        // This code is used to populate the ComboBox with region, wereda , zone and kebele info based on the user selecion
+        private void LoadRegions()
+        {
+            try
+            {
+                string query = "SELECT DISTINCT Region FROM Location";
+                DataTable dt = GetData(query);
+                if (dt != null)
+                {
+                    region_CB.DataSource = dt;
+                    region_CB.DisplayMember = "Region";
+                    region_CB.ValueMember = "Region";
+                    region_CB.SelectedIndex = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void LoadZones(string selectedRegion)
+        {
+            try
+            {
+                string query = "SELECT DISTINCT Zone FROM Location WHERE Region = @Region";
+                DataTable dt = GetData(query, new MySqlParameter("@Region", selectedRegion));
+                if (dt != null)
+                {
+                    zone_CB.DataSource = dt;
+                    zone_CB.DisplayMember = "Zone";
+                    zone_CB.ValueMember = "Zone";
+                    zone_CB.SelectedIndex = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void LoadWeredas(string selectedZone)
+        {
+            try
+            {
+                string query = "SELECT DISTINCT Wereda FROM Location WHERE Zone = @Zone";
+                DataTable dt = GetData(query, new MySqlParameter("@Zone", selectedZone));
+                if (dt != null)
+                {
+                    wereda_CB.DataSource = dt;
+                    wereda_CB.DisplayMember = "Wereda";
+                    wereda_CB.ValueMember = "Wereda";
+                    wereda_CB.SelectedIndex = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void LoadKebeles(string selectedWereda)
+        {
+            try
+            {
+                string query = "SELECT DISTINCT Kebele FROM Location WHERE Wereda = @Wereda";
+                DataTable dt = GetData(query, new MySqlParameter("@Wereda", selectedWereda));
+                if (dt != null)
+                {
+                    kebele_CB.DataSource = dt;
+                    kebele_CB.DisplayMember = "Kebele";
+                    kebele_CB.ValueMember = "Kebele";
+                    kebele_CB.SelectedIndex = -1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private DataTable GetData(string query, params MySqlParameter[] parameters)
+        {
+            DataTable dt = new DataTable();
+            using (connection = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddRange(parameters);
+                    connection.Open();
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
+
+        private void regionComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (region_CB.SelectedIndex != -1)
+            {
+                string selectedRegion = region_CB.SelectedValue.ToString();
+                LoadZones(selectedRegion);
+            }
+        }
+
+        private void zoneComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (zone_CB.SelectedIndex != -1)
+            {
+                string selectedZone = zone_CB.SelectedValue.ToString();
+                LoadWeredas(selectedZone);
+            }
+        }
+
+        private void weredaComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (wereda_CB.SelectedIndex != -1)
+            {
+                string selectedWereda = wereda_CB.SelectedValue.ToString();
+                LoadKebeles(selectedWereda);
             }
         }
     }

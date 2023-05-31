@@ -698,6 +698,7 @@
             this.wereda_CB.Name = "wereda_CB";
             this.wereda_CB.Size = new System.Drawing.Size(186, 28);
             this.wereda_CB.TabIndex = 73;
+            this.wereda_CB.SelectedIndexChanged += new System.EventHandler(this.weredaComboBox_SelectedIndexChanged_1);
             // 
             // label12
             // 
@@ -726,6 +727,7 @@
             this.zone_CB.Name = "zone_CB";
             this.zone_CB.Size = new System.Drawing.Size(186, 28);
             this.zone_CB.TabIndex = 71;
+            this.zone_CB.SelectedIndexChanged += new System.EventHandler(this.zoneComboBox_SelectedIndexChanged_1);
             // 
             // label11
             // 
@@ -760,6 +762,7 @@
             this.region_CB.Name = "region_CB";
             this.region_CB.Size = new System.Drawing.Size(186, 28);
             this.region_CB.TabIndex = 69;
+            this.region_CB.SelectedIndexChanged += new System.EventHandler(this.regionComboBox_SelectedIndexChanged_1);
             // 
             // label10
             // 
@@ -1001,6 +1004,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "RegestarationForm";
             this.Text = "Regestaration Page";
+            this.Load += new System.EventHandler(this.RegestarationForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
