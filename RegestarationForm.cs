@@ -31,13 +31,25 @@ namespace Kebele_Management_System
         {
             Validator v = new Validator();
             bool allValid = true;
-
+            
             //Phone number Validation
             if (!(v.isValidPhoneNumber(phoneNumber.Text)) || v.isEmptyText(phoneNumber.Text)) {
                 errorProvider.SetError(phoneNumber, "Invalid Phone Number Format Use(+251-----)");
                 allValid = false;
             }
-            else { errorProvider.SetError(phoneNumber, null); }
+            else 
+            {
+                bool phoneExists = v.PhoneNumberExists(phoneNumber.Text);
+                if (phoneExists)
+                {
+                    errorProvider.SetError(phoneNumber, "Phone Number Already Exists");
+                    allValid = false;
+                }
+                else
+                {
+                    errorProvider.SetError(phoneNumber, null);
+                }
+            }
 
             //Email Validation
             if (!(v.isValidEmail(email.Text)) || v.isEmptyText(email.Text))
@@ -45,7 +57,22 @@ namespace Kebele_Management_System
                 errorProvider.SetError(email, "Invalid Email");
                 allValid= false;
             }
-            else { errorProvider.SetError(email, null); }
+            else 
+            {
+                bool emailExists = v.EmailExists(email.Text);
+                if (emailExists)
+                {
+                    errorProvider.SetError(email, "Email Already Exists");
+                    allValid = false;
+                }
+                else
+                {
+                    errorProvider.SetError(email, null);
+                }
+                
+            }
+
+           
 
             //Password Validation
             if (v.isEmptyText(password.Text))
@@ -77,17 +104,19 @@ namespace Kebele_Management_System
             }
             else { errorProvider.SetError(grandFatherName_TB, null); }
 
-            if (!(v.isValidName(occupation.Text)) || v.isEmptyText(occupation.Text))
-            {
-                errorProvider.SetError(occupation, "Invalid Name");
-                allValid = false;
-            }
-            else { errorProvider.SetError(occupation, null); }
+            
 
-            //ComboBox Validation
+            //ComboBox Validation occupation_CB
             if (sex.SelectedItem == null || sex.SelectedIndex == -1) 
             {
                 errorProvider.SetError(sex, "Cant't be empty Select something");
+                allValid = false;
+            }
+            else { errorProvider.SetError(sex, null); }
+
+            if (occupation_CB.SelectedItem == null || occupation_CB.SelectedIndex == -1)
+            {
+                errorProvider.SetError(occupation_CB, "Cant't be empty Select something");
                 allValid = false;
             }
             else { errorProvider.SetError(sex, null); }
@@ -135,6 +164,7 @@ namespace Kebele_Management_System
             else { errorProvider.SetError(bloodType_CB, null); }
 
             //Radio Button Validation
+            
             if (martial_married.Checked == false && martial_single.Checked == false)
             {
                 errorProvider.SetError(maritalBox, "Please Select");
@@ -152,14 +182,42 @@ namespace Kebele_Management_System
             else
             {
                 allValid = false;
-                errorProvider.SetError(idPicture, "Please select an image before registering.");
+                errorProvider.SetError(uploadImage_btn, "Please select an image before registering.");
             }
 
             if (allValid)
             {
+                DateTime today = DateTime.Today;
+                int year = today.Year;
+                int month = today.Month;
+                int day = today.Day;
+                string firstname, fathername, grandfathername, emaill, phone, sexDB, passwordDB, bloodtype;
+                string nationalityDB, occup, dateofbirth, maritalstatus, region, zone, woreda, kebele, image;
+                string issuedate;
+
+                firstname = firstName_TB.Text;
+                fathername = fatherName_TB.Text;
+                grandfathername = grandFatherName_TB.Text;
+                emaill = email.Text;
+                phone = phoneNumber.Text;
+                if (martial_married.Checked) { maritalstatus = martial_married.Text; }
+                if (martial_single.Checked) { maritalstatus = martial_single.Text; }
+                passwordDB = password.Text;
+                bloodtype = bloodType_CB.SelectedText;
+                sexDB = sex.SelectedText;
+                nationalityDB = nationality.SelectedText;
+                occup = occupation_CB.SelectedText;
+                int age = (int)(year - birth_year.Value);
+                dateofbirth = birth_day.Value.ToString() + '/' + birth_month.Value.ToString() + '/' + birth_year.Value.ToString();
+                region = region_CB.SelectedText;
+                zone = zone_CB.SelectedText;
+                woreda = wereda_CB.SelectedText;
+                kebele = kebele_CB.SelectedText;
+                issuedate = day.ToString() + '/' + month.ToString() + '/' + year.ToString();
+                UploadImage(selectedImagePath);
                 // If everything is Valid
                 Console.WriteLine("Done!!! Corecct!!!!");
-                UploadImage(selectedImagePath);
+                
             }
         }
 
@@ -313,7 +371,7 @@ namespace Kebele_Management_System
                     command.ExecuteNonQuery();
                 }
 
-                MessageBox.Show("Image uploaded successfully!");
+                //MessageBox.Show("Image uploaded successfully!");
             }
             catch (Exception ex)
             {
