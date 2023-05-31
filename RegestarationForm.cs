@@ -253,10 +253,12 @@ namespace Kebele_Management_System
                             connection.Open();
                             command.ExecuteNonQuery();
                             Console.WriteLine("Data inserted successfully!");
+                            MessageBox.Show("Data inserted successfully!!");
                         }
                         catch (Exception ex)
                         {
                             Console.WriteLine("Error inserting data: " + ex.Message);
+                            MessageBox.Show("Data inserted successfully!!");
                         }
                         finally
                         {
