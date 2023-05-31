@@ -61,7 +61,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.occupation = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.bloodType_CB = new System.Windows.Forms.ComboBox();
@@ -99,6 +98,7 @@
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.idPicture = new System.Windows.Forms.PictureBox();
             this.uploadImage_btn = new System.Windows.Forms.Button();
+            this.occupation_CB = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -171,6 +171,7 @@
             // 
             // personalInfo
             // 
+            this.personalInfo.Controls.Add(this.occupation_CB);
             this.personalInfo.Controls.Add(this.register_btn);
             this.personalInfo.Controls.Add(this.label38);
             this.personalInfo.Controls.Add(this.label35);
@@ -194,7 +195,6 @@
             this.personalInfo.Controls.Add(this.label23);
             this.personalInfo.Controls.Add(this.label22);
             this.personalInfo.Controls.Add(this.label21);
-            this.personalInfo.Controls.Add(this.occupation);
             this.personalInfo.Controls.Add(this.label19);
             this.personalInfo.Controls.Add(this.label18);
             this.personalInfo.Controls.Add(this.bloodType_CB);
@@ -540,14 +540,6 @@
             this.label21.TabIndex = 87;
             this.label21.Text = "*";
             // 
-            // occupation
-            // 
-            this.occupation.Font = new System.Drawing.Font("Roboto", 13F);
-            this.occupation.Location = new System.Drawing.Point(237, 363);
-            this.occupation.Name = "occupation";
-            this.occupation.Size = new System.Drawing.Size(186, 28);
-            this.occupation.TabIndex = 86;
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -574,6 +566,7 @@
             // 
             // bloodType_CB
             // 
+            this.bloodType_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bloodType_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.bloodType_CB.FormattingEnabled = true;
             this.bloodType_CB.Items.AddRange(new object[] {
@@ -781,6 +774,7 @@
             // 
             // sex
             // 
+            this.sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.sex.FormattingEnabled = true;
             this.sex.Items.AddRange(new object[] {
@@ -991,6 +985,38 @@
             this.uploadImage_btn.UseVisualStyleBackColor = false;
             this.uploadImage_btn.Click += new System.EventHandler(this.uploadImage_btn_Click);
             // 
+            // occupation_CB
+            // 
+            this.occupation_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.occupation_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.occupation_CB.FormattingEnabled = true;
+            this.occupation_CB.Items.AddRange(new object[] {
+            "Accountant",
+            "Architect",
+            "Business Owner",
+            "Consultant",
+            "Dentist",
+            "Doctor",
+            "Engineer",
+            "Farmer",
+            "Government Employee",
+            "Homemaker",
+            "Journalist",
+            "Lawyer",
+            "Nurse",
+            "Pharmacist",
+            "Police Officer",
+            "Professor",
+            "Salesperson",
+            "Self-Employed",
+            "Student",
+            "Teacher",
+            "Unemployed"});
+            this.occupation_CB.Location = new System.Drawing.Point(237, 365);
+            this.occupation_CB.Name = "occupation_CB";
+            this.occupation_CB.Size = new System.Drawing.Size(186, 28);
+            this.occupation_CB.TabIndex = 107;
+            // 
             // RegestarationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1044,7 +1070,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox occupation;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox bloodType_CB;
@@ -1091,5 +1116,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.PictureBox idPicture;
         private System.Windows.Forms.Button uploadImage_btn;
+        private System.Windows.Forms.ComboBox occupation_CB;
     }
 }
