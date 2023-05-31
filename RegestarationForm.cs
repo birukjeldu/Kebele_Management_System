@@ -119,7 +119,7 @@ namespace Kebele_Management_System
                 errorProvider.SetError(occupation_CB, "Cant't be empty Select something");
                 allValid = false;
             }
-            else { errorProvider.SetError(sex, null); }
+            else { errorProvider.SetError(occupation_CB, null); }
 
             if (nationality.SelectedItem == null || nationality.SelectedIndex == -1)
             {
@@ -177,7 +177,7 @@ namespace Kebele_Management_System
             {
                 // Upload the image to the database
                 //UploadImage(selectedImagePath);
-                errorProvider.SetError(idPicture, null);
+                errorProvider.SetError(uploadImage_btn, null);
             }
             else
             {
@@ -192,7 +192,7 @@ namespace Kebele_Management_System
                 int month = today.Month;
                 int day = today.Day;
                 string firstname, fathername, grandfathername, emaill, phone, sexDB, passwordDB, bloodtype;
-                string nationalityDB, occup, dateofbirth, maritalstatus, region, zone, woreda, kebele, image;
+                string nationalityDB, occup, dateofbirth, maritalstatus=string.Empty, region, zone, woreda, kebele, image;
                 string issuedate;
 
                 firstname = firstName_TB.Text;
@@ -203,21 +203,70 @@ namespace Kebele_Management_System
                 if (martial_married.Checked) { maritalstatus = martial_married.Text; }
                 if (martial_single.Checked) { maritalstatus = martial_single.Text; }
                 passwordDB = password.Text;
-                bloodtype = bloodType_CB.SelectedText;
-                sexDB = sex.SelectedText;
-                nationalityDB = nationality.SelectedText;
-                occup = occupation_CB.SelectedText;
+                bloodtype = bloodType_CB.SelectedItem.ToString();
+                sexDB = sex.SelectedItem.ToString();
+                nationalityDB = nationality.SelectedItem.ToString();
+                occup = occupation_CB.SelectedItem.ToString();
                 int age = (int)(year - birth_year.Value);
                 dateofbirth = birth_day.Value.ToString() + '/' + birth_month.Value.ToString() + '/' + birth_year.Value.ToString();
-                region = region_CB.SelectedText;
-                zone = zone_CB.SelectedText;
-                woreda = wereda_CB.SelectedText;
-                kebele = kebele_CB.SelectedText;
+                DataRowView selectedRow = (DataRowView)region_CB.SelectedItem;
+                region = selectedRow["region"].ToString();
+                DataRowView selectedRow1 = (DataRowView)zone_CB.SelectedItem;
+                zone = selectedRow1["zone"].ToString();
+                DataRowView selectedRow2 = (DataRowView)wereda_CB.SelectedItem;
+                woreda = selectedRow2["wereda"].ToString();
+                DataRowView selectedRow3 = (DataRowView)kebele_CB.SelectedItem;
+                kebele = selectedRow3["kebele"].ToString();
                 issuedate = day.ToString() + '/' + month.ToString() + '/' + year.ToString();
-                UploadImage(selectedImagePath);
+                //UploadImage(selectedImagePath);
                 // If everything is Valid
-                Console.WriteLine("Done!!! Corecct!!!!");
                 
+                string insertQuery = "INSERT INTO waiting (firstname, fathername, grandfathername, email, phone, sex, password, age, bloodtype, nationality, occupation, dateofbirth, maritalstatus, issuedate, region, zone, woreda, kebele, image) VALUES (@Firstname, @Fathername, @Grandfathername, @Email, @Phone, @Sex, @Password, @Age, @Bloodtype, @Nationality, @Occupation, @DateOfBirth, @MaritalStatus, @IssueDate, @Region, @Zone, @Woreda, @Kebele, @Image)";
+
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
+                    {
+                        // Set parameter values
+                        command.Parameters.AddWithValue("@Firstname", firstname);
+                        command.Parameters.AddWithValue("@Fathername", fathername);
+                        command.Parameters.AddWithValue("@Grandfathername", grandfathername);
+                        command.Parameters.AddWithValue("@Email", emaill);
+                        command.Parameters.AddWithValue("@Phone", phone);
+                        command.Parameters.AddWithValue("@Sex", sexDB);
+                        command.Parameters.AddWithValue("@Password", passwordDB);
+                        command.Parameters.AddWithValue("@Age", age);
+                        command.Parameters.AddWithValue("@Bloodtype", bloodtype);
+                        command.Parameters.AddWithValue("@Nationality", nationalityDB);
+                        command.Parameters.AddWithValue("@Occupation", occup);
+                        command.Parameters.AddWithValue("@DateOfBirth", dateofbirth);
+                        command.Parameters.AddWithValue("@MaritalStatus", maritalstatus);
+                        command.Parameters.AddWithValue("@IssueDate", issuedate);
+                        command.Parameters.AddWithValue("@Region", region);
+                        command.Parameters.AddWithValue("@Zone", zone);
+                        command.Parameters.AddWithValue("@Woreda", woreda);
+                        command.Parameters.AddWithValue("@Kebele", kebele);
+                        command.Parameters.AddWithValue("@Image", GetImageData(selectedImagePath));
+
+                        try
+                        {
+                            connection.Open();
+                            command.ExecuteNonQuery();
+                            Console.WriteLine("Data inserted successfully!");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Error inserting data: " + ex.Message);
+                        }
+                        finally
+                        {
+                            connection.Close();
+                        }
+                    }
+                }
+
+
+
             }
         }
 
@@ -378,6 +427,24 @@ namespace Kebele_Management_System
                 MessageBox.Show("Error uploading image: " + ex.Message);
             }
         }
+
+        private byte[] GetImageData(string imagePath)
+        {
+            byte[] imageData = null;
+            if (!string.IsNullOrEmpty(imagePath))
+            {
+                try
+                {
+                    imageData = File.ReadAllBytes(imagePath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error reading image file: " + ex.Message);
+                }
+            }
+            return imageData;
+        }
+
         private void uploadImage_btn_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
