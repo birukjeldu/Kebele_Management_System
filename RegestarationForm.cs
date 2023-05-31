@@ -12,6 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using MySql.Data.MySqlClient;
 using MessageBox = System.Windows.Forms.MessageBox;
+using System.IO;
 
 namespace Kebele_Management_System
 {
@@ -141,10 +142,24 @@ namespace Kebele_Management_System
             }
             else { errorProvider.SetError(maritalBox, null); }
 
+
+            if (!string.IsNullOrEmpty(selectedImagePath))
+            {
+                // Upload the image to the database
+                //UploadImage(selectedImagePath);
+                errorProvider.SetError(idPicture, null);
+            }
+            else
+            {
+                allValid = false;
+                errorProvider.SetError(idPicture, "Please select an image before registering.");
+            }
+
             if (allValid)
             {
                 // If everything is Valid
                 Console.WriteLine("Done!!! Corecct!!!!");
+                UploadImage(selectedImagePath);
             }
         }
 
@@ -276,6 +291,46 @@ namespace Kebele_Management_System
             {
                 string selectedWereda = wereda_CB.SelectedValue.ToString();
                 LoadKebeles(selectedWereda);
+            }
+        }
+
+
+        //To Upload an image
+        private string selectedImagePath;
+        private void UploadImage(string imagePath)
+        {
+            try
+            {
+                byte[] imageBytes = File.ReadAllBytes(imagePath);
+
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = "INSERT INTO test (image) VALUES (@Image)";
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@Image", imageBytes);
+                    command.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Image uploaded successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error uploading image: " + ex.Message);
+            }
+        }
+        private void uploadImage_btn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.jpg, *.png, *.jpeg)|*.jpg;*.png;*.jpeg";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                selectedImagePath = openFileDialog.FileName;
+
+                // Display the selected image
+                idPicture.Image = Image.FromFile(selectedImagePath);
             }
         }
     }

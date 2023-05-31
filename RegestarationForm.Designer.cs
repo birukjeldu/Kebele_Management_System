@@ -97,6 +97,8 @@
             this.firstName_TB = new System.Windows.Forms.TextBox();
             this.fullName_label = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.idPicture = new System.Windows.Forms.PictureBox();
+            this.uploadImage_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -107,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.birth_year)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_day)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -118,7 +121,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1129, 82);
+            this.panel1.Size = new System.Drawing.Size(1270, 82);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -156,12 +159,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.uploadImage_btn);
+            this.panel2.Controls.Add(this.idPicture);
             this.panel2.Controls.Add(this.personalInfo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.panel2.Location = new System.Drawing.Point(0, 82);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1129, 585);
+            this.panel2.Size = new System.Drawing.Size(1270, 627);
             this.panel2.TabIndex = 1;
             // 
             // personalInfo
@@ -225,9 +230,9 @@
             this.personalInfo.Controls.Add(this.firstName_TB);
             this.personalInfo.Controls.Add(this.fullName_label);
             this.personalInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.personalInfo.Location = new System.Drawing.Point(34, 27);
+            this.personalInfo.Location = new System.Drawing.Point(340, 19);
             this.personalInfo.Name = "personalInfo";
-            this.personalInfo.Size = new System.Drawing.Size(1052, 546);
+            this.personalInfo.Size = new System.Drawing.Size(904, 546);
             this.personalInfo.TabIndex = 54;
             this.personalInfo.TabStop = false;
             this.personalInfo.Text = "Personal Information";
@@ -266,7 +271,7 @@
             this.label35.BackColor = System.Drawing.Color.Transparent;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label35.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label35.Location = new System.Drawing.Point(882, 37);
+            this.label35.Location = new System.Drawing.Point(813, 37);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(86, 18);
             this.label35.TabIndex = 53;
@@ -278,7 +283,7 @@
             this.label34.BackColor = System.Drawing.Color.Transparent;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label34.ForeColor = System.Drawing.Color.Red;
-            this.label34.Location = new System.Drawing.Point(865, 37);
+            this.label34.Location = new System.Drawing.Point(796, 37);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(15, 20);
             this.label34.TabIndex = 52;
@@ -302,7 +307,7 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label20.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label20.Location = new System.Drawing.Point(771, 37);
+            this.label20.Location = new System.Drawing.Point(702, 37);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(96, 18);
             this.label20.TabIndex = 0;
@@ -310,15 +315,9 @@
             // 
             // kebele_CB
             // 
+            this.kebele_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.kebele_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.kebele_CB.FormattingEnabled = true;
-            this.kebele_CB.Items.AddRange(new object[] {
-            "Ethiopian",
-            "Kenyan",
-            "Algerian",
-            "American",
-            "Somalian",
-            "Ertirean"});
             this.kebele_CB.Location = new System.Drawing.Point(681, 292);
             this.kebele_CB.Name = "kebele_CB";
             this.kebele_CB.Size = new System.Drawing.Size(186, 28);
@@ -685,15 +684,9 @@
             // 
             // wereda_CB
             // 
+            this.wereda_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.wereda_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.wereda_CB.FormattingEnabled = true;
-            this.wereda_CB.Items.AddRange(new object[] {
-            "Ethiopian",
-            "Kenyan",
-            "Algerian",
-            "American",
-            "Somalian",
-            "Ertirean"});
             this.wereda_CB.Location = new System.Drawing.Point(451, 292);
             this.wereda_CB.Name = "wereda_CB";
             this.wereda_CB.Size = new System.Drawing.Size(186, 28);
@@ -714,15 +707,9 @@
             // 
             // zone_CB
             // 
+            this.zone_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.zone_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.zone_CB.FormattingEnabled = true;
-            this.zone_CB.Items.AddRange(new object[] {
-            "Ethiopian",
-            "Kenyan",
-            "Algerian",
-            "American",
-            "Somalian",
-            "Ertirean"});
             this.zone_CB.Location = new System.Drawing.Point(237, 292);
             this.zone_CB.Name = "zone_CB";
             this.zone_CB.Size = new System.Drawing.Size(186, 28);
@@ -743,21 +730,9 @@
             // 
             // region_CB
             // 
+            this.region_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.region_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.region_CB.FormattingEnabled = true;
-            this.region_CB.Items.AddRange(new object[] {
-            "Addis Ababa",
-            "Afar",
-            "Amhara",
-            "Benishangul-Gumuz",
-            "Dire Dawa",
-            "Gambela",
-            "Harari",
-            "Oromia",
-            "Sidama",
-            "Somali",
-            "Southern Nations, Nationalities, and Peoples\'",
-            "Tigray"});
             this.region_CB.Location = new System.Drawing.Point(21, 292);
             this.region_CB.Name = "region_CB";
             this.region_CB.Size = new System.Drawing.Size(186, 28);
@@ -994,12 +969,34 @@
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
+            // idPicture
+            // 
+            this.idPicture.Location = new System.Drawing.Point(25, 19);
+            this.idPicture.Name = "idPicture";
+            this.idPicture.Size = new System.Drawing.Size(271, 245);
+            this.idPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.idPicture.TabIndex = 55;
+            this.idPicture.TabStop = false;
+            // 
+            // uploadImage_btn
+            // 
+            this.uploadImage_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.uploadImage_btn.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadImage_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uploadImage_btn.Location = new System.Drawing.Point(25, 302);
+            this.uploadImage_btn.Name = "uploadImage_btn";
+            this.uploadImage_btn.Size = new System.Drawing.Size(271, 37);
+            this.uploadImage_btn.TabIndex = 56;
+            this.uploadImage_btn.Text = "Upload Image";
+            this.uploadImage_btn.UseVisualStyleBackColor = false;
+            this.uploadImage_btn.Click += new System.EventHandler(this.uploadImage_btn_Click);
+            // 
             // RegestarationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1129, 667);
+            this.ClientSize = new System.Drawing.Size(1270, 709);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "RegestarationForm";
@@ -1018,6 +1015,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.birth_year)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_day)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1091,5 +1089,7 @@
         private System.Windows.Forms.ComboBox kebele_CB;
         private System.Windows.Forms.Button register_btn;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.PictureBox idPicture;
+        private System.Windows.Forms.Button uploadImage_btn;
     }
 }
