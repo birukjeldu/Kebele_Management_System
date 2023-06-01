@@ -77,6 +77,44 @@ namespace Kebele_Management_System
             return exists;
         }
 
+        internal bool PhoneNumberExists_edit(string phoneNumber, string id)
+        {
+            bool exists = false;
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Check in first table
+                    string query1 = "SELECT COUNT(*) FROM waiting WHERE phone = @PhoneNumber AND id != @Id";
+                    MySqlCommand command1 = new MySqlCommand(query1, connection);
+                    command1.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                    command1.Parameters.AddWithValue("@Id", id);
+
+                    int count1 = Convert.ToInt32(command1.ExecuteScalar());
+
+                    // Check in second table
+                    string query2 = "SELECT COUNT(*) FROM users WHERE phone = @PhoneNumber AND id != @Id";
+                    MySqlCommand command2 = new MySqlCommand(query2, connection);
+                    command2.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                    command2.Parameters.AddWithValue("@Id", id);
+
+                    int count2 = Convert.ToInt32(command2.ExecuteScalar());
+
+                    exists = (count1 > 0) || (count2 > 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error checking phone number existence: " + ex.Message);
+            }
+
+            return exists;
+        }
+
+
         internal bool EmailExists(string email)
         {
             bool exists = false;
@@ -111,6 +149,44 @@ namespace Kebele_Management_System
 
             return exists;
         }
+
+        internal bool EmailExists_edit(string email, string id)
+        {
+            bool exists = false;
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Check in first table
+                    string query1 = "SELECT COUNT(*) FROM waiting WHERE email = @Email AND id != @Id";
+                    MySqlCommand command1 = new MySqlCommand(query1, connection);
+                    command1.Parameters.AddWithValue("@Email", email);
+                    command1.Parameters.AddWithValue("@Id", id);
+
+                    int count1 = Convert.ToInt32(command1.ExecuteScalar());
+
+                    // Check in second table
+                    string query2 = "SELECT COUNT(*) FROM users WHERE email = @Email AND id != @Id";
+                    MySqlCommand command2 = new MySqlCommand(query2, connection);
+                    command2.Parameters.AddWithValue("@Email", email);
+                    command2.Parameters.AddWithValue("@Id", id);
+
+                    int count2 = Convert.ToInt32(command2.ExecuteScalar());
+
+                    exists = (count1 > 0) || (count2 > 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error checking email existence: " + ex.Message);
+            }
+
+            return exists;
+        }
+
 
 
     }

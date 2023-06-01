@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -126,7 +128,14 @@ namespace Kebele_Management_System
                 martial_married.Checked = true;
             }
 
+            using (MemoryStream ms = new MemoryStream(image))
+            {
+                // Create an Image object from the byte array
+                Image imageObject = Image.FromStream(ms);
 
+                // Assign the Image object to the PictureBox control
+                idPicture.Image = imageObject;
+            }
 
         }
 
@@ -305,6 +314,286 @@ namespace Kebele_Management_System
             return dt;
         }
 
+        private void update_btn_Click(object sender, EventArgs e)
+        {
+            Validator v = new Validator();
+            bool allValid = true;
 
+            //Phone number Validation
+            if (!(v.isValidPhoneNumber(phoneNumber.Text)) || v.isEmptyText(phoneNumber.Text))
+            {
+                errorProvider.SetError(phoneNumber, "Invalid Phone Number Format Use(+251-----)");
+                allValid = false;
+            }
+            else
+            {
+                bool phoneExists = v.PhoneNumberExists_edit(phoneNumber.Text,id);
+                if (phoneExists)
+                {
+                    errorProvider.SetError(phoneNumber, "Phone Number Already Exists");
+                    allValid = false;
+                }
+                else
+                {
+                    errorProvider.SetError(phoneNumber, null);
+                }
+            }
+
+            //Email Validation
+            if (!(v.isValidEmail(email_TB.Text)) || v.isEmptyText(email_TB.Text))
+            {
+                errorProvider.SetError(email_TB, "Invalid Email");
+                allValid = false;
+            }
+            else
+            {
+                bool emailExists = v.EmailExists_edit(email_TB.Text,id);
+                if (emailExists)
+                {
+                    errorProvider.SetError(email_TB, "Email Already Exists");
+                    allValid = false;
+                }
+                else
+                {
+                    errorProvider.SetError(email_TB, null);
+                }
+
+            }
+
+
+
+            //Password Validation
+            if (v.isEmptyText(password_TB.Text))
+            {
+                errorProvider.SetError(password_TB, "Enter Password");
+                allValid = false;
+            }
+            else { errorProvider.SetError(password_TB, null); }
+
+            // Name Validation isValidName
+            if (!(v.isValidName(firstName_TB.Text)) || v.isEmptyText(firstName_TB.Text))
+            {
+                errorProvider.SetError(firstName_TB, "Invalid Name");
+                allValid = false;
+            }
+            else { errorProvider.SetError(firstName_TB, null); }
+
+            if (!(v.isValidName(fatherName_TB.Text)) || v.isEmptyText(fatherName_TB.Text))
+            {
+                errorProvider.SetError(fatherName_TB, "Invalid Name");
+                allValid = false;
+            }
+            else { errorProvider.SetError(fatherName_TB, null); }
+
+            if (!(v.isValidName(grandFatherName_TB.Text)) || v.isEmptyText(grandFatherName_TB.Text))
+            {
+                errorProvider.SetError(grandFatherName_TB, "Invalid Name");
+                allValid = false;
+            }
+            else { errorProvider.SetError(grandFatherName_TB, null); }
+
+
+
+            //ComboBox Validation occupation_CB
+            if (sex_CB.SelectedItem == null || sex_CB.SelectedIndex == -1)
+            {
+                errorProvider.SetError(sex_CB, "Cant't be empty Select something");
+                allValid = false;
+            }
+            else { errorProvider.SetError(sex_CB, null); }
+
+            if (occupation_CB.SelectedItem == null || occupation_CB.SelectedIndex == -1)
+            {
+                errorProvider.SetError(occupation_CB, "Cant't be empty Select something");
+                allValid = false;
+            }
+            else { errorProvider.SetError(occupation_CB, null); }
+
+            if (nationality_CB.SelectedItem == null || nationality_CB.SelectedIndex == -1)
+            {
+                errorProvider.SetError(nationality_CB, "Cant't be empty Select something");
+                allValid = false;
+            }
+            else { errorProvider.SetError(nationality_CB, null); }
+
+            if (region_CB.SelectedItem == null || region_CB.SelectedIndex == -1)
+            {
+                errorProvider.SetError(region_CB, "Cant't be empty Select something");
+                allValid = false;
+            }
+            else { errorProvider.SetError(region_CB, null); }
+
+            if (zone_CB.SelectedItem == null || zone_CB.SelectedIndex == -1)
+            {
+                errorProvider.SetError(zone_CB, "Cant't be empty Select something");
+                allValid = false;
+            }
+            else { errorProvider.SetError(zone_CB, null); }
+
+            if (wereda_CB.SelectedItem == null || wereda_CB.SelectedIndex == -1)
+            {
+                errorProvider.SetError(wereda_CB, "Cant't be empty Select something");
+                allValid = false;
+            }
+            else { errorProvider.SetError(wereda_CB, null); }
+
+            if (kebele_CB.SelectedItem == null || kebele_CB.SelectedIndex == -1)
+            {
+                errorProvider.SetError(kebele_CB, "Cant't be empty Select something");
+                allValid = false;
+            }
+            else { errorProvider.SetError(kebele_CB, null); }
+
+            if (bloodType_CB.SelectedItem == null || bloodType_CB.SelectedIndex == -1)
+            {
+                errorProvider.SetError(bloodType_CB, "Cant't be empty Select something");
+                allValid = false;
+            }
+            else { errorProvider.SetError(bloodType_CB, null); }
+
+            //Radio Button Validation
+
+            if (martial_married.Checked == false && martial_single.Checked == false)
+            {
+                errorProvider.SetError(maritalBox, "Please Select");
+                allValid = false;
+            }
+            else { errorProvider.SetError(maritalBox, null); }
+
+
+            //idPicture.Image = Image(image);
+
+            if (allValid)
+            {
+                DateTime today = DateTime.Today;
+                int year = today.Year;
+                int month = today.Month;
+                int day = today.Day;
+                string firstname, fathername, grandfathername, emaill, phone, sexDB, passwordDB, bloodtype;
+                string nationalityDB, occup, dateofbirth, maritalstatus = string.Empty, region, zone, woreda, kebele, image;
+                string issuedate;
+                int houseNumber;
+
+                firstname = firstName_TB.Text;
+                fathername = fatherName_TB.Text;
+                grandfathername = grandFatherName_TB.Text;
+                emaill = email_TB.Text;
+                phone = phoneNumber.Text;
+                if (martial_married.Checked) { maritalstatus = martial_married.Text; }
+                if (martial_single.Checked) { maritalstatus = martial_single.Text; }
+                passwordDB = password_TB.Text;
+                bloodtype = bloodType_CB.SelectedItem.ToString();
+                sexDB = sex_CB.SelectedItem.ToString();
+                nationalityDB = nationality_CB.SelectedItem.ToString();
+                occup = occupation_CB.SelectedItem.ToString();
+                int age = (int)(year - birth_year.Value);
+                dateofbirth = birth_day.Value.ToString() + '/' + birth_month.Value.ToString() + '/' + birth_year.Value.ToString();
+                DataRowView selectedRow = (DataRowView)region_CB.SelectedItem;
+                region = selectedRow["region"].ToString();
+                DataRowView selectedRow1 = (DataRowView)zone_CB.SelectedItem;
+                zone = selectedRow1["zone"].ToString();
+                DataRowView selectedRow2 = (DataRowView)wereda_CB.SelectedItem;
+                woreda = selectedRow2["wereda"].ToString();
+                DataRowView selectedRow3 = (DataRowView)kebele_CB.SelectedItem;
+                kebele = selectedRow3["kebele"].ToString();
+
+
+                try
+                {
+                    // Establish a database connection
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        // Prepare the update query
+                        string updateQuery = "UPDATE users SET firstname = @firstname, fathername = @fathername, grandfathername = @grandfathername, email = @email, "
+                            + "phone = @phone, sex = @sex, "
+                            + "password = @password, age = @age, bloodtype = @bloodtype, nationality = @nationality, occupation = @occupation, "
+                            + "dateofbirth = @dateofbirth, maritalstatus = @maritalstatus, region = @region, zone = @zone, "
+                            + "woreda = @woreda, kebele = @kebele, image = @image WHERE id = @id";
+
+                        // Create a SqlCommand object with the query and connection
+                        using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                        {
+                            // Set the parameter values
+                            command.Parameters.AddWithValue("@firstname", firstname);
+                            command.Parameters.AddWithValue("@fathername", fathername);
+                            command.Parameters.AddWithValue("@grandfathername", grandfathername);
+                            command.Parameters.AddWithValue("@email", email);
+                            command.Parameters.AddWithValue("@phone", phone);
+                            command.Parameters.AddWithValue("@sex", sex);
+                            command.Parameters.AddWithValue("@password", password);
+                            command.Parameters.AddWithValue("@age", age);
+                            command.Parameters.AddWithValue("@bloodtype", bloodtype);
+                            command.Parameters.AddWithValue("@nationality", nationality);
+                            command.Parameters.AddWithValue("@occupation", occupation);
+                            command.Parameters.AddWithValue("@dateofbirth", dateofbirth);
+                            command.Parameters.AddWithValue("@maritalstatus", maritalstatus);
+                            command.Parameters.AddWithValue("@region", region);
+                            command.Parameters.AddWithValue("@zone", zone);
+                            command.Parameters.AddWithValue("@woreda", woreda);
+                            command.Parameters.AddWithValue("@kebele", kebele);
+                            command.Parameters.AddWithValue("@id", id);
+                            //command.Parameters.AddWithValue("@image", image);
+
+                            // Execute the update query
+                            command.ExecuteNonQuery();
+                        }
+
+                        // Close the database connection
+                        connection.Close();
+                    }
+
+                    // Display a success message to the user
+                    MessageBox.Show("Record updated successfully.");
+                }
+                catch (Exception ex)
+                {
+                    // Display an error message to the user
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+                // Close the edit form
+            }
+        }
+        private string selectedImagePath;
+
+        private byte[] GetImageData(string imagePath)
+        {
+            byte[] imageData = null;
+            if (!string.IsNullOrEmpty(imagePath))
+            {
+                try
+                {
+                    imageData = File.ReadAllBytes(imagePath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error reading image file: " + ex.Message);
+                }
+            }
+            return imageData;
+        }
+        private void uploadImage_btn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.jpg, *.png, *.jpeg)|*.jpg;*.png;*.jpeg";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                selectedImagePath = openFileDialog.FileName;
+
+                // Display the selected image
+                idPicture.Image = Image.FromFile(selectedImagePath);
+            }
+        }
+
+
+        private void cancel_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
     }
 }
