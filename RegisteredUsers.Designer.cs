@@ -32,7 +32,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.registeredDataGridView = new System.Windows.Forms.DataGridView();
+            this.edit_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.registeredDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +59,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.Controls.Add(this.edit_btn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 350);
             this.panel1.Name = "panel1";
@@ -72,6 +75,16 @@
             this.registeredDataGridView.Size = new System.Drawing.Size(800, 350);
             this.registeredDataGridView.TabIndex = 3;
             // 
+            // edit_btn
+            // 
+            this.edit_btn.Location = new System.Drawing.Point(3, 25);
+            this.edit_btn.Name = "edit_btn";
+            this.edit_btn.Size = new System.Drawing.Size(149, 53);
+            this.edit_btn.TabIndex = 0;
+            this.edit_btn.Text = "button1";
+            this.edit_btn.UseVisualStyleBackColor = true;
+            this.edit_btn.Click += new System.EventHandler(this.edit_btn_Click);
+            // 
             // RegisteredUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -86,6 +99,7 @@
             this.Name = "RegisteredUsers";
             this.Text = "RegisteredUsers";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.registeredDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -98,5 +112,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView registeredDataGridView;
+        private System.Windows.Forms.Button edit_btn;
     }
 }

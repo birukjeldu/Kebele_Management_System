@@ -89,7 +89,7 @@ namespace Kebele_Management_System
 
                         // Insert the selected data into a new table
                         string insertQuery = "INSERT INTO users (firstname, fathername, grandfathername, email,birthcardverification,expirationdate,image, phone, sex, password, age, bloodtype, nationality, occupation, dateofbirth, maritalstatus, approveddate, region, zone, woreda, kebele) " +
-                            "VALUES (@id, @firstname, @fathername, @grandfathername, @email,@birthcardverification,@expirationdate,@image, @phone, @sex, @password, @age, @bloodtype, @nationality, @occupation, @dateofbirth, @maritalstatus, @approveddate, @region, @zone, @woreda, @kebele)";
+                            "VALUES (@firstname, @fathername, @grandfathername, @email,@birthcardverification,@expirationdate,@image, @phone, @sex, @password, @age, @bloodtype, @nationality, @occupation, @dateofbirth, @maritalstatus, @approveddate, @region, @zone, @woreda, @kebele)";
 
                         using (MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection))
                         {
