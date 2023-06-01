@@ -31,7 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.registeredDataGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registeredDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,12 +63,22 @@
             this.panel1.Size = new System.Drawing.Size(800, 100);
             this.panel1.TabIndex = 2;
             // 
+            // registeredDataGridView
+            // 
+            this.registeredDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.registeredDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.registeredDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.registeredDataGridView.Name = "registeredDataGridView";
+            this.registeredDataGridView.Size = new System.Drawing.Size(800, 350);
+            this.registeredDataGridView.TabIndex = 3;
+            // 
             // RegisteredUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.registeredDataGridView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -74,6 +86,7 @@
             this.Name = "RegisteredUsers";
             this.Text = "RegisteredUsers";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registeredDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,5 +97,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView registeredDataGridView;
     }
 }
