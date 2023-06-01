@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.uploadImage_btn = new System.Windows.Forms.Button();
             this.idPicture = new System.Windows.Forms.PictureBox();
             this.personalInfo = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cancel_btn = new System.Windows.Forms.Button();
             this.occupation_CB = new System.Windows.Forms.ComboBox();
-            this.register_btn = new System.Windows.Forms.Button();
+            this.update_btn = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
             this.kebele_CB = new System.Windows.Forms.ComboBox();
             this.maritalBox = new System.Windows.Forms.GroupBox();
@@ -74,6 +75,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.firstName_TB = new System.Windows.Forms.TextBox();
             this.fullName_label = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.idPicture)).BeginInit();
             this.personalInfo.SuspendLayout();
             this.maritalBox.SuspendLayout();
@@ -81,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.birth_month)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_year)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_day)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // uploadImage_btn
@@ -94,6 +97,7 @@
             this.uploadImage_btn.TabIndex = 59;
             this.uploadImage_btn.Text = "Upload Image";
             this.uploadImage_btn.UseVisualStyleBackColor = false;
+            this.uploadImage_btn.Click += new System.EventHandler(this.uploadImage_btn_Click);
             // 
             // idPicture
             // 
@@ -106,9 +110,9 @@
             // 
             // personalInfo
             // 
-            this.personalInfo.Controls.Add(this.button1);
+            this.personalInfo.Controls.Add(this.cancel_btn);
             this.personalInfo.Controls.Add(this.occupation_CB);
-            this.personalInfo.Controls.Add(this.register_btn);
+            this.personalInfo.Controls.Add(this.update_btn);
             this.personalInfo.Controls.Add(this.label39);
             this.personalInfo.Controls.Add(this.kebele_CB);
             this.personalInfo.Controls.Add(this.maritalBox);
@@ -154,20 +158,21 @@
             this.personalInfo.TabIndex = 57;
             this.personalInfo.TabStop = false;
             // 
-            // button1
+            // cancel_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.Crimson;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(451, 494);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.button1.Size = new System.Drawing.Size(186, 46);
-            this.button1.TabIndex = 108;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = false;
+            this.cancel_btn.BackColor = System.Drawing.Color.Crimson;
+            this.cancel_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancel_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
+            this.cancel_btn.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cancel_btn.Location = new System.Drawing.Point(451, 494);
+            this.cancel_btn.Name = "cancel_btn";
+            this.cancel_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.cancel_btn.Size = new System.Drawing.Size(186, 46);
+            this.cancel_btn.TabIndex = 108;
+            this.cancel_btn.Text = "Cancel";
+            this.cancel_btn.UseVisualStyleBackColor = false;
+            this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 
             // occupation_CB
             // 
@@ -201,20 +206,21 @@
             this.occupation_CB.Size = new System.Drawing.Size(186, 28);
             this.occupation_CB.TabIndex = 107;
             // 
-            // register_btn
+            // update_btn
             // 
-            this.register_btn.BackColor = System.Drawing.Color.SeaGreen;
-            this.register_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.register_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
-            this.register_btn.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.register_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.register_btn.Location = new System.Drawing.Point(237, 494);
-            this.register_btn.Name = "register_btn";
-            this.register_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.register_btn.Size = new System.Drawing.Size(186, 46);
-            this.register_btn.TabIndex = 106;
-            this.register_btn.Text = "Update";
-            this.register_btn.UseVisualStyleBackColor = false;
+            this.update_btn.BackColor = System.Drawing.Color.SeaGreen;
+            this.update_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
+            this.update_btn.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.update_btn.Location = new System.Drawing.Point(237, 494);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.update_btn.Size = new System.Drawing.Size(186, 46);
+            this.update_btn.TabIndex = 106;
+            this.update_btn.Text = "Update";
+            this.update_btn.UseVisualStyleBackColor = false;
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
             // 
             // label39
             // 
@@ -702,6 +708,10 @@
             this.fullName_label.TabIndex = 52;
             this.fullName_label.Text = "First Name:";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // EditPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -723,6 +733,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.birth_month)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_year)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_day)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -733,7 +744,7 @@
         private System.Windows.Forms.PictureBox idPicture;
         private System.Windows.Forms.GroupBox personalInfo;
         private System.Windows.Forms.ComboBox occupation_CB;
-        private System.Windows.Forms.Button register_btn;
+        private System.Windows.Forms.Button update_btn;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.ComboBox kebele_CB;
         private System.Windows.Forms.GroupBox maritalBox;
@@ -774,6 +785,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox firstName_TB;
         private System.Windows.Forms.Label fullName_label;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cancel_btn;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

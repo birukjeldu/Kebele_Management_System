@@ -194,6 +194,7 @@ namespace Kebele_Management_System
                 string firstname, fathername, grandfathername, emaill, phone, sexDB, passwordDB, bloodtype;
                 string nationalityDB, occup, dateofbirth, maritalstatus=string.Empty, region, zone, woreda, kebele, image;
                 string issuedate;
+                int houseNumber;
 
                 firstname = firstName_TB.Text;
                 fathername = fatherName_TB.Text;
@@ -218,10 +219,11 @@ namespace Kebele_Management_System
                 DataRowView selectedRow3 = (DataRowView)kebele_CB.SelectedItem;
                 kebele = selectedRow3["kebele"].ToString();
                 issuedate = day.ToString() + '/' + month.ToString() + '/' + year.ToString();
+                houseNumber = (int)house_number.Value;
                 //UploadImage(selectedImagePath);
                 // If everything is Valid
-                
-                string insertQuery = "INSERT INTO waiting (firstname, fathername, grandfathername, email, phone, sex, password, age, bloodtype, nationality, occupation, dateofbirth, maritalstatus, issuedate, region, zone, woreda, kebele, image) VALUES (@Firstname, @Fathername, @Grandfathername, @Email, @Phone, @Sex, @Password, @Age, @Bloodtype, @Nationality, @Occupation, @DateOfBirth, @MaritalStatus, @IssueDate, @Region, @Zone, @Woreda, @Kebele, @Image)";
+
+                string insertQuery = "INSERT INTO waiting (firstname, fathername, grandfathername, email, phone, sex, password, age, bloodtype, nationality, occupation, dateofbirth, maritalstatus, issuedate, region, zone, woreda, kebele, image,house_number) VALUES (@Firstname, @Fathername, @Grandfathername, @Email, @Phone, @Sex, @Password, @Age, @Bloodtype, @Nationality, @Occupation, @DateOfBirth, @MaritalStatus, @IssueDate, @Region, @Zone, @Woreda, @Kebele, @Image,@houseNumber)";
 
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
@@ -246,6 +248,7 @@ namespace Kebele_Management_System
                         command.Parameters.AddWithValue("@Zone", zone);
                         command.Parameters.AddWithValue("@Woreda", woreda);
                         command.Parameters.AddWithValue("@Kebele", kebele);
+                        command.Parameters.AddWithValue("@houseNumber", houseNumber);
                         command.Parameters.AddWithValue("@Image", GetImageData(selectedImagePath));
 
                         try
@@ -459,6 +462,11 @@ namespace Kebele_Management_System
                 // Display the selected image
                 idPicture.Image = Image.FromFile(selectedImagePath);
             }
+        }
+
+        private void personalInfo_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

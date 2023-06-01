@@ -35,7 +35,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.uploadImage_btn = new System.Windows.Forms.Button();
+            this.idPicture = new System.Windows.Forms.PictureBox();
             this.personalInfo = new System.Windows.Forms.GroupBox();
+            this.occupation_CB = new System.Windows.Forms.ComboBox();
             this.register_btn = new System.Windows.Forms.Button();
             this.label38 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -96,12 +99,10 @@
             this.firstName_TB = new System.Windows.Forms.TextBox();
             this.fullName_label = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.idPicture = new System.Windows.Forms.PictureBox();
-            this.uploadImage_btn = new System.Windows.Forms.Button();
-            this.occupation_CB = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.idPicture)).BeginInit();
             this.personalInfo.SuspendLayout();
             this.maritalBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.house_number)).BeginInit();
@@ -109,7 +110,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.birth_year)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_day)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -168,6 +168,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1270, 627);
             this.panel2.TabIndex = 1;
+            // 
+            // uploadImage_btn
+            // 
+            this.uploadImage_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.uploadImage_btn.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadImage_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uploadImage_btn.Location = new System.Drawing.Point(25, 302);
+            this.uploadImage_btn.Name = "uploadImage_btn";
+            this.uploadImage_btn.Size = new System.Drawing.Size(271, 37);
+            this.uploadImage_btn.TabIndex = 56;
+            this.uploadImage_btn.Text = "Upload Image";
+            this.uploadImage_btn.UseVisualStyleBackColor = false;
+            this.uploadImage_btn.Click += new System.EventHandler(this.uploadImage_btn_Click);
+            // 
+            // idPicture
+            // 
+            this.idPicture.Location = new System.Drawing.Point(25, 19);
+            this.idPicture.Name = "idPicture";
+            this.idPicture.Size = new System.Drawing.Size(271, 245);
+            this.idPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.idPicture.TabIndex = 55;
+            this.idPicture.TabStop = false;
             // 
             // personalInfo
             // 
@@ -236,6 +258,39 @@
             this.personalInfo.TabIndex = 54;
             this.personalInfo.TabStop = false;
             this.personalInfo.Text = "Personal Information";
+            this.personalInfo.Enter += new System.EventHandler(this.personalInfo_Enter);
+            // 
+            // occupation_CB
+            // 
+            this.occupation_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.occupation_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.occupation_CB.FormattingEnabled = true;
+            this.occupation_CB.Items.AddRange(new object[] {
+            "Accountant",
+            "Architect",
+            "Business Owner",
+            "Consultant",
+            "Dentist",
+            "Doctor",
+            "Engineer",
+            "Farmer",
+            "Government Employee",
+            "Homemaker",
+            "Journalist",
+            "Lawyer",
+            "Nurse",
+            "Pharmacist",
+            "Police Officer",
+            "Professor",
+            "Salesperson",
+            "Self-Employed",
+            "Student",
+            "Teacher",
+            "Unemployed"});
+            this.occupation_CB.Location = new System.Drawing.Point(237, 365);
+            this.occupation_CB.Name = "occupation_CB";
+            this.occupation_CB.Size = new System.Drawing.Size(186, 28);
+            this.occupation_CB.TabIndex = 107;
             // 
             // register_btn
             // 
@@ -746,6 +801,7 @@
             // 
             // nationality
             // 
+            this.nationality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.nationality.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.nationality.FormattingEnabled = true;
             this.nationality.Items.AddRange(new object[] {
@@ -963,60 +1019,6 @@
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
-            // idPicture
-            // 
-            this.idPicture.Location = new System.Drawing.Point(25, 19);
-            this.idPicture.Name = "idPicture";
-            this.idPicture.Size = new System.Drawing.Size(271, 245);
-            this.idPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.idPicture.TabIndex = 55;
-            this.idPicture.TabStop = false;
-            // 
-            // uploadImage_btn
-            // 
-            this.uploadImage_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.uploadImage_btn.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadImage_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.uploadImage_btn.Location = new System.Drawing.Point(25, 302);
-            this.uploadImage_btn.Name = "uploadImage_btn";
-            this.uploadImage_btn.Size = new System.Drawing.Size(271, 37);
-            this.uploadImage_btn.TabIndex = 56;
-            this.uploadImage_btn.Text = "Upload Image";
-            this.uploadImage_btn.UseVisualStyleBackColor = false;
-            this.uploadImage_btn.Click += new System.EventHandler(this.uploadImage_btn_Click);
-            // 
-            // occupation_CB
-            // 
-            this.occupation_CB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.occupation_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.occupation_CB.FormattingEnabled = true;
-            this.occupation_CB.Items.AddRange(new object[] {
-            "Accountant",
-            "Architect",
-            "Business Owner",
-            "Consultant",
-            "Dentist",
-            "Doctor",
-            "Engineer",
-            "Farmer",
-            "Government Employee",
-            "Homemaker",
-            "Journalist",
-            "Lawyer",
-            "Nurse",
-            "Pharmacist",
-            "Police Officer",
-            "Professor",
-            "Salesperson",
-            "Self-Employed",
-            "Student",
-            "Teacher",
-            "Unemployed"});
-            this.occupation_CB.Location = new System.Drawing.Point(237, 365);
-            this.occupation_CB.Name = "occupation_CB";
-            this.occupation_CB.Size = new System.Drawing.Size(186, 28);
-            this.occupation_CB.TabIndex = 107;
-            // 
             // RegestarationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1032,6 +1034,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.idPicture)).EndInit();
             this.personalInfo.ResumeLayout(false);
             this.personalInfo.PerformLayout();
             this.maritalBox.ResumeLayout(false);
@@ -1041,7 +1044,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.birth_year)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.birth_day)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
