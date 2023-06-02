@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace Kebele_Management_System
 {
     public partial class RegisteredUsers : Form
     {
+        //private MySqlConnection connection;
         string connstring = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
         public RegisteredUsers()
         {
@@ -45,6 +47,11 @@ namespace Kebele_Management_System
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+            finally
+            {
+              //  connection.Close();
+            }
+
         }
 
         private void edit_btn_Click(object sender, EventArgs e)
@@ -85,6 +92,43 @@ namespace Kebele_Management_System
                 DisplayTableData();
             }
         }
+
+        private void delete_btn_Click(object sender, EventArgs e)
+        {
+            // Check if a single row is selected
+            if (registeredDataGridView.SelectedRows.Count == 1)
+            {
+                // Get the selected row
+                DataGridViewRow selectedRow = registeredDataGridView.SelectedRows[0];
+
+                // Get the ID from the selected row
+                string id = selectedRow.Cells["id"].Value.ToString();
+
+                try
+                {
+                    using (MySqlConnection connection = new MySqlConnection(connstring))
+                    {
+                        connection.Open();
+
+                        // Delete the selected row from the current table
+                        string deleteQuery = "DELETE FROM users WHERE id = @id";
+                        using (MySqlCommand deleteCommand = new MySqlCommand(deleteQuery, connection))
+                        {
+                            deleteCommand.Parameters.AddWithValue("@id", id);
+                            deleteCommand.ExecuteNonQuery();
+                        }
+
+                        // Refresh the DataGridView
+                        DisplayTableData();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
 
     }
 }

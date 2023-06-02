@@ -18,6 +18,7 @@ namespace Kebele_Management_System
     
     public partial class EditPanel : Form
     {
+        //Creating a connnectin to the database 
         private MySqlConnection connection;
         private string connectionString = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
 
@@ -137,6 +138,7 @@ namespace Kebele_Management_System
                 idPicture.Image = imageObject;
             }
 
+            
         }
 
         private void EditPanel_Load(object sender, EventArgs e)
@@ -327,7 +329,7 @@ namespace Kebele_Management_System
             }
             else
             {
-                bool phoneExists = v.PhoneNumberExists_edit(phoneNumber.Text,id);
+                bool phoneExists = v.PhoneNumberExists_edit(phoneNumber.Text, id);
                 if (phoneExists)
                 {
                     errorProvider.SetError(phoneNumber, "Phone Number Already Exists");
@@ -347,7 +349,7 @@ namespace Kebele_Management_System
             }
             else
             {
-                bool emailExists = v.EmailExists_edit(email_TB.Text,id);
+                bool emailExists = v.EmailExists_edit(email_TB.Text, id);
                 if (emailExists)
                 {
                     errorProvider.SetError(email_TB, "Email Already Exists");
@@ -498,6 +500,7 @@ namespace Kebele_Management_System
                 kebele = selectedRow3["kebele"].ToString();
 
 
+
                 try
                 {
                     // Establish a database connection
@@ -506,11 +509,29 @@ namespace Kebele_Management_System
                         connection.Open();
 
                         // Prepare the update query
-                        string updateQuery = "UPDATE users SET firstname = @firstname, fathername = @fathername, grandfathername = @grandfathername, email = @email, "
-                            + "phone = @phone, sex = @sex, "
-                            + "password = @password, age = @age, bloodtype = @bloodtype, nationality = @nationality, occupation = @occupation, "
-                            + "dateofbirth = @dateofbirth, maritalstatus = @maritalstatus, region = @region, zone = @zone, "
-                            + "woreda = @woreda, kebele = @kebele, image = @image WHERE id = @id";
+                        string updateQuery = @"
+            UPDATE [kebele_management_system].[users]
+            SET
+                [firstname] = @firstname,
+                [fathername] = @fathername,
+                [grandfathername] = @grandfathername,
+                [email] = @email,
+                [phone] = @phone,
+                [sex] = @sex,
+                [password] = @password,
+                [age] = @age,
+                [bloodtype] = @bloodtype,
+                [nationality] = @nationality,
+                [occupation] = @occupation,
+                [dateofbirth] = @dateofbirth,
+                [maritalstatus] = @maritalstatus,
+                [region] = @region,
+                [zone] = @zone,
+                [woreda] = @woreda,
+                [kebele] = @kebele,
+                [image] = @image,
+                [house_number] = @house_number
+            WHERE [id] = @id";
 
                         // Create a SqlCommand object with the query and connection
                         using (SqlCommand command = new SqlCommand(updateQuery, connection))
@@ -533,8 +554,9 @@ namespace Kebele_Management_System
                             command.Parameters.AddWithValue("@zone", zone);
                             command.Parameters.AddWithValue("@woreda", woreda);
                             command.Parameters.AddWithValue("@kebele", kebele);
+                            command.Parameters.AddWithValue("@image", GetImageData(selectedImagePath));
+                            command.Parameters.AddWithValue("@house_number", house_number);
                             command.Parameters.AddWithValue("@id", id);
-                            //command.Parameters.AddWithValue("@image", image);
 
                             // Execute the update query
                             command.ExecuteNonQuery();
@@ -552,10 +574,12 @@ namespace Kebele_Management_System
                     // Display an error message to the user
                     MessageBox.Show("Error: " + ex.Message);
                 }
-
-                // Close the edit form
             }
         }
+            
+
+// Close the edit form
+
         private string selectedImagePath;
 
         private byte[] GetImageData(string imagePath)
