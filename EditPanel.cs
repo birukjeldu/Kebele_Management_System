@@ -504,37 +504,37 @@ namespace Kebele_Management_System
                 try
                 {
                     // Establish a database connection
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
                     {
                         connection.Open();
 
                         // Prepare the update query
                         string updateQuery = @"
-            UPDATE [kebele_management_system].[users]
+            UPDATE `kebele_management_system`.`users`
             SET
-                [firstname] = @firstname,
-                [fathername] = @fathername,
-                [grandfathername] = @grandfathername,
-                [email] = @email,
-                [phone] = @phone,
-                [sex] = @sex,
-                [password] = @password,
-                [age] = @age,
-                [bloodtype] = @bloodtype,
-                [nationality] = @nationality,
-                [occupation] = @occupation,
-                [dateofbirth] = @dateofbirth,
-                [maritalstatus] = @maritalstatus,
-                [region] = @region,
-                [zone] = @zone,
-                [woreda] = @woreda,
-                [kebele] = @kebele,
-                [image] = @image,
-                [house_number] = @house_number
-            WHERE [id] = @id";
+                firstname = @firstname,
+                fathername = @fathername,
+                grandfathername = @grandfathername,
+                email = @email,
+                phone = @phone,
+                sex = @sex,
+                password = @password,
+                age = @age,
+                bloodtype = @bloodtype,
+                nationality = @nationality,
+                occupation = @occupation,
+                dateofbirth = @dateofbirth,
+                maritalstatus = @maritalstatus,
+                region = @region,
+                zone = @zone,
+                woreda = @woreda,
+                kebele = @kebele,
+                image = @image,
+                house_number = @house_number
+            WHERE id = @id;";
 
                         // Create a SqlCommand object with the query and connection
-                        using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                        using (MySqlCommand command = new MySqlCommand(updateQuery, connection))
                         {
                             // Set the parameter values
                             command.Parameters.AddWithValue("@firstname", firstname);
