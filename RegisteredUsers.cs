@@ -72,6 +72,7 @@ namespace Kebele_Management_System
                 string sex = selectedRow.Cells["sex"].Value.ToString();
                 string password = selectedRow.Cells["password"].Value.ToString();
                 string age = selectedRow.Cells["age"].Value.ToString();
+                string housenumber = selectedRow.Cells["house_number"].Value.ToString();
                 string bloodtype = selectedRow.Cells["bloodtype"].Value.ToString();
                 string nationality = selectedRow.Cells["nationality"].Value.ToString();
                 string occupation = selectedRow.Cells["occupation"].Value.ToString();
@@ -85,7 +86,7 @@ namespace Kebele_Management_System
                 byte[] image = (byte[])selectedRow.Cells["image"].Value;
 
                 // Pass the values to the edit form
-                EditPanel editForm = new EditPanel(id, firstname, fathername, grandfathername, email, phone, sex, password, age, bloodtype, nationality, occupation, dateofbirth, maritalstatus, issuedate, region, zone, woreda, kebele, image);
+                EditPanel editForm = new EditPanel(id, firstname, fathername, grandfathername, email, phone, sex, password, age, bloodtype, nationality, occupation, dateofbirth, maritalstatus, issuedate, region, zone, woreda, kebele, image, housenumber);
                 editForm.ShowDialog();
 
                 // Refresh the table data after editing

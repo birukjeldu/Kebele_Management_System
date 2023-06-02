@@ -69,6 +69,7 @@ namespace Kebele_Management_System
                 string sex = selectedRow.Cells["sex"].Value.ToString();
                 string password = selectedRow.Cells["password"].Value.ToString();
                 string age = selectedRow.Cells["age"].Value.ToString();
+                string housenumber = selectedRow.Cells["house_number"].Value.ToString();
                 string bloodtype = selectedRow.Cells["bloodtype"].Value.ToString();
                 string nationality = selectedRow.Cells["nationality"].Value.ToString();
                 string occupation = selectedRow.Cells["occupation"].Value.ToString();
@@ -89,8 +90,8 @@ namespace Kebele_Management_System
                         connection.Open();
 
                         // Insert the selected data into a new table
-                        string insertQuery = "INSERT INTO users (firstname, fathername, grandfathername, email,birthcardverification,expirationdate,image, phone, sex, password, age, bloodtype, nationality, occupation, dateofbirth, maritalstatus, approveddate, region, zone, woreda, kebele) " +
-                            "VALUES (@firstname, @fathername, @grandfathername, @email,@birthcardverification,@expirationdate,@image, @phone, @sex, @password, @age, @bloodtype, @nationality, @occupation, @dateofbirth, @maritalstatus, @approveddate, @region, @zone, @woreda, @kebele)";
+                        string insertQuery = "INSERT INTO users (firstname, fathername, grandfathername, email,birthcardverification,expirationdate,image, phone, sex, password, age, bloodtype, nationality, occupation, dateofbirth, maritalstatus, approveddate, region, zone, woreda, kebele,house_number) " +
+                            "VALUES (@firstname, @fathername, @grandfathername, @email,@birthcardverification,@expirationdate,@image, @phone, @sex, @password, @age, @bloodtype, @nationality, @occupation, @dateofbirth, @maritalstatus, @approveddate, @region, @zone, @woreda, @kebele,@housenumber)";
 
                         using (MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection))
                         {
@@ -103,6 +104,7 @@ namespace Kebele_Management_System
                             insertCommand.Parameters.AddWithValue("@sex", sex);
                             insertCommand.Parameters.AddWithValue("@password", password);
                             insertCommand.Parameters.AddWithValue("@age", age);
+                            insertCommand.Parameters.AddWithValue("@housenumber", housenumber);
                             insertCommand.Parameters.AddWithValue("@bloodtype", bloodtype);
                             insertCommand.Parameters.AddWithValue("@nationality", nationality);
                             insertCommand.Parameters.AddWithValue("@occupation", occupation);

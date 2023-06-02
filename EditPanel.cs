@@ -32,7 +32,8 @@ namespace Kebele_Management_System
         private string phone;
         private string sex;
         private string password;
-        private string age;
+        private string age; 
+        private string housenumber;
         private string bloodtype;
         private string nationality;
         private string occupation;
@@ -44,7 +45,7 @@ namespace Kebele_Management_System
         private string woreda;
         private string kebele;
         private byte[] image;
-        public EditPanel(string id, string firstname, string fathername, string grandfathername, string email, string phone, string sex, string password, string age, string bloodtype, string nationality, string occupation, string dateofbirth, string maritalstatus, string issuedate, string region, string zone, string woreda, string kebele, byte[] image)
+        public EditPanel(string id, string firstname, string fathername, string grandfathername, string email, string phone, string sex, string password, string age, string bloodtype, string nationality, string occupation, string dateofbirth, string maritalstatus, string issuedate, string region, string zone, string woreda, string kebele, byte[] image,string housenumber)
         {
             InitializeComponent();
             // Store the passed values in the variables
@@ -68,6 +69,7 @@ namespace Kebele_Management_System
             this.woreda = woreda;
             this.kebele = kebele;
             this.image = image;
+            this.housenumber = housenumber;
 
             // Set the initial values in the form controls
             firstName_TB.Text = firstname;
@@ -106,6 +108,7 @@ namespace Kebele_Management_System
 
             // Set the selected value for the kebele ComboBox
             kebele_CB.SelectedItem = kebele;
+            house_number.Value = Convert.ToDecimal(housenumber);
 
 
             // Set the selected value for the region ComboBox
@@ -484,6 +487,7 @@ namespace Kebele_Management_System
                 if (martial_married.Checked) { maritalstatus = martial_married.Text; }
                 if (martial_single.Checked) { maritalstatus = martial_single.Text; }
                 passwordDB = password_TB.Text;
+                houseNumber = (int)house_number.Value; ;
                 bloodtype = bloodType_CB.SelectedItem.ToString();
                 sexDB = sex_CB.SelectedItem.ToString();
                 nationalityDB = nationality_CB.SelectedItem.ToString();
@@ -555,7 +559,7 @@ namespace Kebele_Management_System
                             command.Parameters.AddWithValue("@woreda", woreda);
                             command.Parameters.AddWithValue("@kebele", kebele);
                             command.Parameters.AddWithValue("@image", GetImageData(selectedImagePath));
-                            command.Parameters.AddWithValue("@house_number", house_number);
+                            command.Parameters.AddWithValue("@house_number", houseNumber);
                             command.Parameters.AddWithValue("@id", id);
 
                             // Execute the update query
@@ -580,7 +584,7 @@ namespace Kebele_Management_System
 
 // Close the edit form
 
-        private string selectedImagePath;
+        private string selectedImagePath ;
 
         private byte[] GetImageData(string imagePath)
         {

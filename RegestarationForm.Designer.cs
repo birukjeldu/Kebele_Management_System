@@ -702,9 +702,24 @@
             // 
             this.house_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.house_number.Location = new System.Drawing.Point(21, 365);
+            this.house_number.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.house_number.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.house_number.Name = "house_number";
             this.house_number.Size = new System.Drawing.Size(186, 26);
             this.house_number.TabIndex = 76;
+            this.house_number.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label14
             // 
