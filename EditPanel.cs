@@ -45,6 +45,7 @@ namespace Kebele_Management_System
         private string woreda;
         private string kebele;
         private byte[] image;
+        byte[] imageData;
         public EditPanel(string id, string firstname, string fathername, string grandfathername, string email, string phone, string sex, string password, string age, string bloodtype, string nationality, string occupation, string dateofbirth, string maritalstatus, string issuedate, string region, string zone, string woreda, string kebele, byte[] image,string housenumber)
         {
             InitializeComponent();
@@ -122,7 +123,7 @@ namespace Kebele_Management_System
 
             // Set the selected value for the kebele ComboBox
             LoadKebeles(woreda, kebele);
-            // Set the selected value for the sex RadioButton
+            // Set the selected value for the maritla status RadioButton
             if (maritalstatus == "Single")
             {
                 martial_single.Checked = true;
@@ -140,8 +141,10 @@ namespace Kebele_Management_System
                 // Assign the Image object to the PictureBox control
                 idPicture.Image = imageObject;
             }
+            imageData = image;
 
-            
+
+
         }
 
         private void EditPanel_Load(object sender, EventArgs e)
@@ -323,7 +326,7 @@ namespace Kebele_Management_System
         {
             Validator v = new Validator();
             bool allValid = true;
-
+            
             //Phone number Validation
             if (!(v.isValidPhoneNumber(phoneNumber.Text)) || v.isEmptyText(phoneNumber.Text))
             {
@@ -465,7 +468,7 @@ namespace Kebele_Management_System
             }
             else { errorProvider.SetError(maritalBox, null); }
 
-
+            
             //idPicture.Image = Image(image);
 
             if (allValid)
@@ -502,7 +505,7 @@ namespace Kebele_Management_System
                 woreda = selectedRow2["wereda"].ToString();
                 DataRowView selectedRow3 = (DataRowView)kebele_CB.SelectedItem;
                 kebele = selectedRow3["kebele"].ToString();
-
+                
 
 
                 try
@@ -537,6 +540,7 @@ namespace Kebele_Management_System
                 house_number = @house_number
             WHERE id = @id;";
 
+                        
                         // Create a SqlCommand object with the query and connection
                         using (MySqlCommand command = new MySqlCommand(updateQuery, connection))
                         {
@@ -558,10 +562,10 @@ namespace Kebele_Management_System
                             command.Parameters.AddWithValue("@zone", zone);
                             command.Parameters.AddWithValue("@woreda", woreda);
                             command.Parameters.AddWithValue("@kebele", kebele);
-                            command.Parameters.AddWithValue("@image", GetImageData(selectedImagePath));
+                            command.Parameters.AddWithValue("@image", imageData);
                             command.Parameters.AddWithValue("@house_number", houseNumber);
                             command.Parameters.AddWithValue("@id", id);
-
+                            
                             // Execute the update query
                             command.ExecuteNonQuery();
                         }
@@ -572,6 +576,7 @@ namespace Kebele_Management_System
 
                     // Display a success message to the user
                     MessageBox.Show("Record updated successfully.");
+                    //this.Close();
                 }
                 catch (Exception ex)
                 {
@@ -604,6 +609,7 @@ namespace Kebele_Management_System
         }
         private void uploadImage_btn_Click(object sender, EventArgs e)
         {
+            
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files (*.jpg, *.png, *.jpeg)|*.jpg;*.png;*.jpeg";
 
@@ -614,6 +620,8 @@ namespace Kebele_Management_System
                 // Display the selected image
                 idPicture.Image = Image.FromFile(selectedImagePath);
             }
+            imageData = GetImageData(selectedImagePath);
+
         }
 
 

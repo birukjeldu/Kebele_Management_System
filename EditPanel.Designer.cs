@@ -170,7 +170,7 @@
             this.cancel_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.cancel_btn.Size = new System.Drawing.Size(186, 46);
             this.cancel_btn.TabIndex = 108;
-            this.cancel_btn.Text = "Cancel";
+            this.cancel_btn.Text = "Exit";
             this.cancel_btn.UseVisualStyleBackColor = false;
             this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 
