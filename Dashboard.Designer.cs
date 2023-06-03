@@ -38,9 +38,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.totalUser_lbl = new System.Windows.Forms.Label();
+            this.approvedUsers_lbl = new System.Windows.Forms.Label();
+            this.waitinUser_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -52,7 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.totalUser_lbl);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(33, 25);
@@ -63,7 +63,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.approvedUsers_lbl);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(301, 25);
@@ -74,7 +74,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.waitinUser_lbl);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Location = new System.Drawing.Point(558, 25);
@@ -148,41 +148,41 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Waiting Users";
             // 
-            // label4
+            // totalUser_lbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.label4.Location = new System.Drawing.Point(93, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "45";
+            this.totalUser_lbl.AutoSize = true;
+            this.totalUser_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.totalUser_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.totalUser_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.totalUser_lbl.Location = new System.Drawing.Point(93, 65);
+            this.totalUser_lbl.Name = "totalUser_lbl";
+            this.totalUser_lbl.Size = new System.Drawing.Size(34, 25);
+            this.totalUser_lbl.TabIndex = 3;
+            this.totalUser_lbl.Text = "45";
             // 
-            // label5
+            // approvedUsers_lbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.label5.Location = new System.Drawing.Point(93, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "45";
+            this.approvedUsers_lbl.AutoSize = true;
+            this.approvedUsers_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.approvedUsers_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.approvedUsers_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.approvedUsers_lbl.Location = new System.Drawing.Point(93, 65);
+            this.approvedUsers_lbl.Name = "approvedUsers_lbl";
+            this.approvedUsers_lbl.Size = new System.Drawing.Size(34, 25);
+            this.approvedUsers_lbl.TabIndex = 4;
+            this.approvedUsers_lbl.Text = "45";
             // 
-            // label6
+            // waitinUser_lbl
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.label6.Location = new System.Drawing.Point(93, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 25);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "45";
+            this.waitinUser_lbl.AutoSize = true;
+            this.waitinUser_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.waitinUser_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.waitinUser_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.waitinUser_lbl.Location = new System.Drawing.Point(93, 65);
+            this.waitinUser_lbl.Name = "waitinUser_lbl";
+            this.waitinUser_lbl.Size = new System.Drawing.Size(34, 25);
+            this.waitinUser_lbl.TabIndex = 5;
+            this.waitinUser_lbl.Text = "45";
             // 
             // Dashboard
             // 
@@ -221,8 +221,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label totalUser_lbl;
+        private System.Windows.Forms.Label approvedUsers_lbl;
+        private System.Windows.Forms.Label waitinUser_lbl;
     }
 }
