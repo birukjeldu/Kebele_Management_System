@@ -54,7 +54,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.settingLabel);
             this.panel1.Controls.Add(this.pictureBox5);
@@ -73,7 +73,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkCyan;
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.Font = new System.Drawing.Font("Roboto", 15F);
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
@@ -83,6 +83,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Log Out";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // settingLabel
             // 
@@ -175,7 +176,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Beige;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -187,7 +188,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(56, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 124);
             this.pictureBox1.TabIndex = 0;
@@ -196,10 +197,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 142);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(41, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 29);
+            this.label1.Size = new System.Drawing.Size(158, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Adminstrator";
             // 
@@ -221,6 +222,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AdminPanelForm";
             this.Text = "AdminPanelForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminPanelForm_FormClosed);
             this.Load += new System.EventHandler(this.AdminPanelForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

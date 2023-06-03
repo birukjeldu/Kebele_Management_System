@@ -73,5 +73,18 @@ namespace Kebele_Management_System
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            login_page login = new login_page();
+            login.Owner = null;
+            login.Show();
+            this.Hide();
+        }
+
+        private void AdminPanelForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
