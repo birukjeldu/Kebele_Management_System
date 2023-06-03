@@ -296,7 +296,7 @@
             this.profilepicture_box.Location = new System.Drawing.Point(22, 72);
             this.profilepicture_box.Name = "profilepicture_box";
             this.profilepicture_box.Size = new System.Drawing.Size(257, 282);
-            this.profilepicture_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profilepicture_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.profilepicture_box.TabIndex = 3;
             this.profilepicture_box.TabStop = false;
             // 
