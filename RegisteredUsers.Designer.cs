@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.delete_btn = new System.Windows.Forms.Button();
             this.edit_btn = new System.Windows.Forms.Button();
             this.registeredDataGridView = new System.Windows.Forms.DataGridView();
-            this.delete_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.registeredDataGridView)).BeginInit();
@@ -62,40 +62,46 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel1.Controls.Add(this.delete_btn);
             this.panel1.Controls.Add(this.edit_btn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 350);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 100);
+            this.panel1.Size = new System.Drawing.Size(800, 61);
             this.panel1.TabIndex = 2;
+            // 
+            // delete_btn
+            // 
+            this.delete_btn.BackColor = System.Drawing.Color.Red;
+            this.delete_btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delete_btn.ForeColor = System.Drawing.Color.White;
+            this.delete_btn.Location = new System.Drawing.Point(177, 9);
+            this.delete_btn.Name = "delete_btn";
+            this.delete_btn.Size = new System.Drawing.Size(144, 43);
+            this.delete_btn.TabIndex = 1;
+            this.delete_btn.Text = "Delete";
+            this.delete_btn.UseVisualStyleBackColor = false;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
             // edit_btn
             // 
-            this.edit_btn.Location = new System.Drawing.Point(3, 25);
+            this.edit_btn.BackColor = System.Drawing.Color.Orange;
+            this.edit_btn.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit_btn.ForeColor = System.Drawing.Color.White;
+            this.edit_btn.Location = new System.Drawing.Point(12, 9);
             this.edit_btn.Name = "edit_btn";
-            this.edit_btn.Size = new System.Drawing.Size(149, 53);
+            this.edit_btn.Size = new System.Drawing.Size(142, 43);
             this.edit_btn.TabIndex = 0;
             this.edit_btn.Text = "Edit";
-            this.edit_btn.UseVisualStyleBackColor = true;
+            this.edit_btn.UseVisualStyleBackColor = false;
             this.edit_btn.Click += new System.EventHandler(this.edit_btn_Click);
             // 
             // registeredDataGridView
             // 
             this.registeredDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.registeredDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.registeredDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.registeredDataGridView.Location = new System.Drawing.Point(0, 61);
             this.registeredDataGridView.Name = "registeredDataGridView";
-            this.registeredDataGridView.Size = new System.Drawing.Size(800, 350);
+            this.registeredDataGridView.Size = new System.Drawing.Size(800, 389);
             this.registeredDataGridView.TabIndex = 3;
-            // 
-            // delete_btn
-            // 
-            this.delete_btn.Location = new System.Drawing.Point(326, 24);
-            this.delete_btn.Name = "delete_btn";
-            this.delete_btn.Size = new System.Drawing.Size(149, 53);
-            this.delete_btn.TabIndex = 1;
-            this.delete_btn.Text = "Delete";
-            this.delete_btn.UseVisualStyleBackColor = true;
-            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
             // RegisteredUsers
             // 

@@ -39,10 +39,11 @@
             this.register_btn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pass_error = new System.Windows.Forms.Label();
+            this.email_error = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.email_error = new System.Windows.Forms.Label();
-            this.pass_error = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -161,6 +162,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pass_error);
             this.panel1.Controls.Add(this.email_error);
             this.panel1.Controls.Add(this.label6);
@@ -172,6 +174,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(996, 635);
             this.panel1.TabIndex = 11;
+            // 
+            // pass_error
+            // 
+            this.pass_error.Location = new System.Drawing.Point(732, 207);
+            this.pass_error.Name = "pass_error";
+            this.pass_error.Size = new System.Drawing.Size(179, 13);
+            this.pass_error.TabIndex = 7;
+            this.pass_error.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // email_error
+            // 
+            this.email_error.Location = new System.Drawing.Point(729, 129);
+            this.email_error.Name = "email_error";
+            this.email_error.Size = new System.Drawing.Size(182, 23);
+            this.email_error.TabIndex = 6;
+            this.email_error.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
@@ -193,21 +211,17 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "E-mail:";
             // 
-            // email_error
+            // button1
             // 
-            this.email_error.Location = new System.Drawing.Point(729, 129);
-            this.email_error.Name = "email_error";
-            this.email_error.Size = new System.Drawing.Size(182, 23);
-            this.email_error.TabIndex = 6;
-            this.email_error.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pass_error
-            // 
-            this.pass_error.Location = new System.Drawing.Point(732, 207);
-            this.pass_error.Name = "pass_error";
-            this.pass_error.Size = new System.Drawing.Size(179, 13);
-            this.pass_error.TabIndex = 7;
-            this.pass_error.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.BackColor = System.Drawing.Color.CadetBlue;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(813, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(183, 44);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Admin";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // login_page
             // 
@@ -230,6 +244,7 @@
             this.Name = "login_page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kebele Management System";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.login_page_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -253,6 +268,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label email_error;
         private System.Windows.Forms.Label pass_error;
+        private System.Windows.Forms.Button button1;
     }
 }
 

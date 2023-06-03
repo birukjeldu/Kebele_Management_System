@@ -16,7 +16,9 @@ namespace Kebele_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login_page());
+            login_page login_Page = new login_page();
+            login_Page.Show();
+            Application.Run();
 
             //Application.Run(new AdminPanelForm());
             //Application.Run(new Test());

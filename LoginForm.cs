@@ -94,5 +94,15 @@ namespace Kebele_Management_System
             return -1;
         }
 
+        private void login_page_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminPanelForm admin = new AdminPanelForm();
+            admin.ShowDialog();
+        }
     }
 }
