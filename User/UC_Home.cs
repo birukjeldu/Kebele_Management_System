@@ -22,6 +22,8 @@ namespace Kebele_Management_System.User
 
         private void UC_Home_Load(object sender, EventArgs e)
         {
+            string fullName = signedUser.FirstName + " " + signedUser.FatherName + " " + signedUser.GrandFatherName;
+            fullName_lbl.Text = fullName;
             age_lbl.Text = signedUser.Age.ToString();
             gender_lbl.Text = signedUser.Sex;
             occupation_lbl.Text = signedUser.Occupation;

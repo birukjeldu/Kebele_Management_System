@@ -61,6 +61,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.id_lbl = new System.Windows.Forms.Label();
+            this.labebee = new System.Windows.Forms.Label();
             this.occupation_lbl = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.gender_lbl = new System.Windows.Forms.Label();
@@ -69,8 +71,6 @@
             this.lablb = new System.Windows.Forms.Label();
             this.fullName_lbl = new System.Windows.Forms.Label();
             this.profielImage_box = new System.Windows.Forms.PictureBox();
-            this.id_lbl = new System.Windows.Forms.Label();
-            this.labebee = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -460,102 +460,15 @@
             this.guna2Panel2.Controls.Add(this.profielImage_box);
             this.guna2Panel2.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(277, 388);
+            this.guna2Panel2.Size = new System.Drawing.Size(321, 388);
             this.guna2Panel2.TabIndex = 0;
-            // 
-            // occupation_lbl
-            // 
-            this.occupation_lbl.AutoSize = true;
-            this.occupation_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.occupation_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.occupation_lbl.Location = new System.Drawing.Point(136, 344);
-            this.occupation_lbl.Name = "occupation_lbl";
-            this.occupation_lbl.Size = new System.Drawing.Size(77, 21);
-            this.occupation_lbl.TabIndex = 22;
-            this.occupation_lbl.Text = "Architect";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label11.Location = new System.Drawing.Point(50, 344);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 21);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Occupation:";
-            // 
-            // gender_lbl
-            // 
-            this.gender_lbl.AutoSize = true;
-            this.gender_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.gender_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.gender_lbl.Location = new System.Drawing.Point(108, 299);
-            this.gender_lbl.Name = "gender_lbl";
-            this.gender_lbl.Size = new System.Drawing.Size(46, 21);
-            this.gender_lbl.TabIndex = 20;
-            this.gender_lbl.Text = "Male";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label2.Location = new System.Drawing.Point(50, 299);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 21);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Gender:";
-            // 
-            // age_lbl
-            // 
-            this.age_lbl.AutoSize = true;
-            this.age_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.age_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.age_lbl.Location = new System.Drawing.Point(86, 320);
-            this.age_lbl.Name = "age_lbl";
-            this.age_lbl.Size = new System.Drawing.Size(28, 21);
-            this.age_lbl.TabIndex = 18;
-            this.age_lbl.Text = "24";
-            // 
-            // lablb
-            // 
-            this.lablb.AutoSize = true;
-            this.lablb.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lablb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.lablb.Location = new System.Drawing.Point(50, 320);
-            this.lablb.Name = "lablb";
-            this.lablb.Size = new System.Drawing.Size(40, 21);
-            this.lablb.TabIndex = 17;
-            this.lablb.Text = "Age:";
-            // 
-            // fullName_lbl
-            // 
-            this.fullName_lbl.AutoSize = true;
-            this.fullName_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.fullName_lbl.ForeColor = System.Drawing.Color.Black;
-            this.fullName_lbl.Location = new System.Drawing.Point(49, 244);
-            this.fullName_lbl.Name = "fullName_lbl";
-            this.fullName_lbl.Size = new System.Drawing.Size(179, 30);
-            this.fullName_lbl.TabIndex = 16;
-            this.fullName_lbl.Text = "Abebe Beso Bela";
-            // 
-            // profielImage_box
-            // 
-            this.profielImage_box.Image = ((System.Drawing.Image)(resources.GetObject("profielImage_box.Image")));
-            this.profielImage_box.Location = new System.Drawing.Point(3, 3);
-            this.profielImage_box.Name = "profielImage_box";
-            this.profielImage_box.Size = new System.Drawing.Size(271, 238);
-            this.profielImage_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.profielImage_box.TabIndex = 0;
-            this.profielImage_box.TabStop = false;
             // 
             // id_lbl
             // 
             this.id_lbl.AutoSize = true;
             this.id_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.id_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.id_lbl.Location = new System.Drawing.Point(137, 278);
+            this.id_lbl.Location = new System.Drawing.Point(113, 285);
             this.id_lbl.Name = "id_lbl";
             this.id_lbl.Size = new System.Drawing.Size(28, 21);
             this.id_lbl.TabIndex = 24;
@@ -566,11 +479,98 @@
             this.labebee.AutoSize = true;
             this.labebee.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.labebee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.labebee.Location = new System.Drawing.Point(50, 278);
+            this.labebee.Location = new System.Drawing.Point(26, 285);
             this.labebee.Name = "labebee";
             this.labebee.Size = new System.Drawing.Size(90, 21);
             this.labebee.TabIndex = 23;
             this.labebee.Text = "ID Number:";
+            // 
+            // occupation_lbl
+            // 
+            this.occupation_lbl.AutoSize = true;
+            this.occupation_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.occupation_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.occupation_lbl.Location = new System.Drawing.Point(112, 351);
+            this.occupation_lbl.Name = "occupation_lbl";
+            this.occupation_lbl.Size = new System.Drawing.Size(77, 21);
+            this.occupation_lbl.TabIndex = 22;
+            this.occupation_lbl.Text = "Architect";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label11.Location = new System.Drawing.Point(26, 351);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(92, 21);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Occupation:";
+            // 
+            // gender_lbl
+            // 
+            this.gender_lbl.AutoSize = true;
+            this.gender_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.gender_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.gender_lbl.Location = new System.Drawing.Point(84, 306);
+            this.gender_lbl.Name = "gender_lbl";
+            this.gender_lbl.Size = new System.Drawing.Size(46, 21);
+            this.gender_lbl.TabIndex = 20;
+            this.gender_lbl.Text = "Male";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label2.Location = new System.Drawing.Point(26, 306);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 21);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Gender:";
+            // 
+            // age_lbl
+            // 
+            this.age_lbl.AutoSize = true;
+            this.age_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.age_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.age_lbl.Location = new System.Drawing.Point(62, 327);
+            this.age_lbl.Name = "age_lbl";
+            this.age_lbl.Size = new System.Drawing.Size(28, 21);
+            this.age_lbl.TabIndex = 18;
+            this.age_lbl.Text = "24";
+            // 
+            // lablb
+            // 
+            this.lablb.AutoSize = true;
+            this.lablb.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lablb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.lablb.Location = new System.Drawing.Point(26, 327);
+            this.lablb.Name = "lablb";
+            this.lablb.Size = new System.Drawing.Size(40, 21);
+            this.lablb.TabIndex = 17;
+            this.lablb.Text = "Age:";
+            // 
+            // fullName_lbl
+            // 
+            this.fullName_lbl.AutoSize = true;
+            this.fullName_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.fullName_lbl.ForeColor = System.Drawing.Color.Black;
+            this.fullName_lbl.Location = new System.Drawing.Point(20, 251);
+            this.fullName_lbl.Name = "fullName_lbl";
+            this.fullName_lbl.Size = new System.Drawing.Size(284, 30);
+            this.fullName_lbl.TabIndex = 16;
+            this.fullName_lbl.Text = "Abenezer Birhanu Tilahunn";
+            // 
+            // profielImage_box
+            // 
+            this.profielImage_box.Image = ((System.Drawing.Image)(resources.GetObject("profielImage_box.Image")));
+            this.profielImage_box.Location = new System.Drawing.Point(25, 3);
+            this.profielImage_box.Name = "profielImage_box";
+            this.profielImage_box.Size = new System.Drawing.Size(271, 238);
+            this.profielImage_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.profielImage_box.TabIndex = 0;
+            this.profielImage_box.TabStop = false;
             // 
             // UC_Home
             // 

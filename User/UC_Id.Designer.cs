@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Id));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.barCodePic = new System.Windows.Forms.PictureBox();
+            this.region_lbl = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.bloodType_lbl = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.phonenumber_lbl = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.expiredate_lbl = new System.Windows.Forms.Label();
@@ -45,18 +50,13 @@
             this.profilepicture_box = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.bloodType_lbl = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.region_lbl = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.barCodePic = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.id_lbl = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.profilepicture_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barCodePic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profilepicture_box)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -94,6 +94,61 @@
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Size = new System.Drawing.Size(691, 371);
             this.guna2Panel1.TabIndex = 2;
+            // 
+            // barCodePic
+            // 
+            this.barCodePic.BackColor = System.Drawing.SystemColors.Info;
+            this.barCodePic.Location = new System.Drawing.Point(300, 304);
+            this.barCodePic.Name = "barCodePic";
+            this.barCodePic.Size = new System.Drawing.Size(374, 50);
+            this.barCodePic.TabIndex = 20;
+            this.barCodePic.TabStop = false;
+            // 
+            // region_lbl
+            // 
+            this.region_lbl.AutoSize = true;
+            this.region_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.region_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.region_lbl.Location = new System.Drawing.Point(502, 211);
+            this.region_lbl.Name = "region_lbl";
+            this.region_lbl.Size = new System.Drawing.Size(76, 25);
+            this.region_lbl.TabIndex = 19;
+            this.region_lbl.Text = "Oromia";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label15.ForeColor = System.Drawing.Color.Blue;
+            this.label15.Location = new System.Drawing.Point(504, 194);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(54, 18);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Region";
+            // 
+            // bloodType_lbl
+            // 
+            this.bloodType_lbl.AutoSize = true;
+            this.bloodType_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.bloodType_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bloodType_lbl.Location = new System.Drawing.Point(423, 157);
+            this.bloodType_lbl.Name = "bloodType_lbl";
+            this.bloodType_lbl.Size = new System.Drawing.Size(39, 25);
+            this.bloodType_lbl.TabIndex = 17;
+            this.bloodType_lbl.Text = "O+";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label14.ForeColor = System.Drawing.Color.Blue;
+            this.label14.Location = new System.Drawing.Point(425, 140);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(82, 18);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Blood Type";
             // 
             // phonenumber_lbl
             // 
@@ -267,61 +322,6 @@
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "የኢትዮጵያ ዲጂታል መታወቂያ ካርድ";
             // 
-            // bloodType_lbl
-            // 
-            this.bloodType_lbl.AutoSize = true;
-            this.bloodType_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.bloodType_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bloodType_lbl.Location = new System.Drawing.Point(423, 157);
-            this.bloodType_lbl.Name = "bloodType_lbl";
-            this.bloodType_lbl.Size = new System.Drawing.Size(39, 25);
-            this.bloodType_lbl.TabIndex = 17;
-            this.bloodType_lbl.Text = "O+";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Roboto", 11F);
-            this.label14.ForeColor = System.Drawing.Color.Blue;
-            this.label14.Location = new System.Drawing.Point(425, 140);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 18);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Blood Type";
-            // 
-            // region_lbl
-            // 
-            this.region_lbl.AutoSize = true;
-            this.region_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.region_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.region_lbl.Location = new System.Drawing.Point(522, 211);
-            this.region_lbl.Name = "region_lbl";
-            this.region_lbl.Size = new System.Drawing.Size(76, 25);
-            this.region_lbl.TabIndex = 19;
-            this.region_lbl.Text = "Oromia";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Roboto", 11F);
-            this.label15.ForeColor = System.Drawing.Color.Blue;
-            this.label15.Location = new System.Drawing.Point(524, 194);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 18);
-            this.label15.TabIndex = 18;
-            this.label15.Text = "Region";
-            // 
-            // barCodePic
-            // 
-            this.barCodePic.BackColor = System.Drawing.SystemColors.Info;
-            this.barCodePic.Location = new System.Drawing.Point(300, 304);
-            this.barCodePic.Name = "barCodePic";
-            this.barCodePic.Size = new System.Drawing.Size(374, 50);
-            this.barCodePic.TabIndex = 20;
-            this.barCodePic.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -332,16 +332,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(263, 66);
             this.panel1.TabIndex = 21;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // id_lbl
             // 
@@ -367,6 +357,16 @@
             this.label16.TabIndex = 6;
             this.label16.Text = "ID Number";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // UC_Id
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,8 +378,8 @@
             this.Load += new System.EventHandler(this.UC_Id_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.profilepicture_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barCodePic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profilepicture_box)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
