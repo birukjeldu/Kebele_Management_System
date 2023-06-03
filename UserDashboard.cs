@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 
 namespace Kebele_Management_System
 {
@@ -108,11 +108,15 @@ namespace Kebele_Management_System
 
         private void logOut_btn_Click(object sender, EventArgs e)
         {
-            this.Close();
             login_page login = new login_page();
             login.Owner = null;
             login.Show();
-            this.Close();
+            this.Hide();
+        }
+
+        private void UserDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

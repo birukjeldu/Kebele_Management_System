@@ -60,6 +60,7 @@
             // logOut_btn
             // 
             this.logOut_btn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.logOut_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logOut_btn.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.logOut_btn.Image = ((System.Drawing.Image)(resources.GetObject("logOut_btn.Image")));
             this.logOut_btn.ImageOffset = new System.Drawing.Point(0, 0);
@@ -205,6 +206,7 @@
             this.Name = "UserDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserDashboard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserDashboard_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
