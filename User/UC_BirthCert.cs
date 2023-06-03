@@ -12,9 +12,14 @@ namespace Kebele_Management_System.User
 {
     public partial class UC_BirthCert : UserControl
     {
-        public UC_BirthCert()
+        Users.RegisteredUser signedUser;
+        public UC_BirthCert(Users.RegisteredUser signedUser)
         {
             InitializeComponent();
+            this.signedUser = signedUser;
+            label1.Text = this.signedUser.Email;
         }
+
+        
     }
 }
