@@ -129,6 +129,9 @@
     <Reference Include="Xceed.Wpf.Toolkit, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
       <HintPath>packages\Extended.Wpf.Toolkit.4.5.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Zen.Barcode.Core">
+      <HintPath>..\..\..\Downloads\Compressed\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminPanelForm.cs">
@@ -212,6 +215,7 @@
     <Compile Include="User\UC_Id.Designer.cs">
       <DependentUpon>UC_Id.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="Validator.cs" />
     <Compile Include="WaitingList.cs">
       <SubType>Form</SubType>
