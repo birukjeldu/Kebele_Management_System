@@ -15,7 +15,7 @@ namespace Kebele_Management_System
         //isValidName
         internal bool isValidName(string name)
         {
-            Regex regex = new Regex(@"^[a-zA-Z\s]+$");
+            Regex regex = new Regex(@"^[a-zA-Z]+$");
             if (regex.IsMatch(name)) return true;
             else return false;
         }

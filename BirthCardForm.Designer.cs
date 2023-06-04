@@ -45,8 +45,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.motherNationality = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.additionalBirthCardInfo_btn = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -136,9 +136,9 @@
             this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label10.Location = new System.Drawing.Point(6, 129);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(201, 18);
+            this.label10.Size = new System.Drawing.Size(146, 18);
             this.label10.TabIndex = 51;
-            this.label10.Text = "Great Grand Mother\'s  Name:";
+            this.label10.Text = "Full Mother\'s  Name:";
             // 
             // GGM_name
             // 
@@ -244,12 +244,26 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.fatherNationality);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.groupBox1.Location = new System.Drawing.Point(345, 149);
+            this.groupBox1.Location = new System.Drawing.Point(260, 99);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(554, 294);
+            this.groupBox1.Size = new System.Drawing.Size(744, 426);
             this.groupBox1.TabIndex = 64;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Additional Family Info";
+            // 
+            // additionalBirthCardInfo_btn
+            // 
+            this.additionalBirthCardInfo_btn.BackColor = System.Drawing.Color.SeaGreen;
+            this.additionalBirthCardInfo_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
+            this.additionalBirthCardInfo_btn.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.additionalBirthCardInfo_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.additionalBirthCardInfo_btn.Location = new System.Drawing.Point(231, 374);
+            this.additionalBirthCardInfo_btn.Name = "additionalBirthCardInfo_btn";
+            this.additionalBirthCardInfo_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.additionalBirthCardInfo_btn.Size = new System.Drawing.Size(186, 46);
+            this.additionalBirthCardInfo_btn.TabIndex = 66;
+            this.additionalBirthCardInfo_btn.Text = "Submit";
+            this.additionalBirthCardInfo_btn.UseVisualStyleBackColor = false;
             // 
             // label21
             // 
@@ -262,20 +276,6 @@
             this.label21.Size = new System.Drawing.Size(15, 20);
             this.label21.TabIndex = 64;
             this.label21.Text = "*";
-            // 
-            // additionalBirthCardInfo_btn
-            // 
-            this.additionalBirthCardInfo_btn.BackColor = System.Drawing.Color.SeaGreen;
-            this.additionalBirthCardInfo_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
-            this.additionalBirthCardInfo_btn.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.additionalBirthCardInfo_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.additionalBirthCardInfo_btn.Location = new System.Drawing.Point(209, 222);
-            this.additionalBirthCardInfo_btn.Name = "additionalBirthCardInfo_btn";
-            this.additionalBirthCardInfo_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.additionalBirthCardInfo_btn.Size = new System.Drawing.Size(186, 46);
-            this.additionalBirthCardInfo_btn.TabIndex = 66;
-            this.additionalBirthCardInfo_btn.Text = "Submit";
-            this.additionalBirthCardInfo_btn.UseVisualStyleBackColor = false;
             // 
             // BirthCardForm
             // 

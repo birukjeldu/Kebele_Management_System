@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,30 +11,31 @@ using MySql.Data.MySqlClient;
 
 namespace Kebele_Management_System
 {
-    public partial class login_page : Form
+    public partial class AdminLogin : Form
     {
-        Validator v = new Validator();
         string connstring = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
-        public login_page()
+        public AdminLogin()
         {
             InitializeComponent();
         }
 
-
-
-        private void login_btn_Click(object sender, EventArgs e)
+        private void AdminLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            int userId = Login(email_TB.Text, password_TB.Text);
+       
+            this.Close();
+        }
+
+        private void adminLogin_btn_Click(object sender, EventArgs e)
+        {
+            int userId = Login(adminEmail_TB.Text, adminPassword_TB.Text);
             if (userId != -1)
             {
                 email_error.Text = "";
-                UserDashboard userDashboard = new UserDashboard(userId);
-                userDashboard.Owner = null;
-                userDashboard.Show();
-                this.Hide();
+                AdminPanelForm adminPanelForm = new AdminPanelForm();
+                //adminPanelForm.Owner = null;
 
-
-
+                adminPanelForm.Show();
+                this.Close();
 
             }
             else
@@ -43,15 +43,6 @@ namespace Kebele_Management_System
                 email_error.Text = "Invalid email or password";
                 email_error.ForeColor = Color.Red;
             }
-
-
-
-        }
-
-        private void register_btn_Click(object sender, EventArgs e)
-        {
-            RegestarationForm reg = new RegestarationForm();
-            reg.ShowDialog();
         }
 
         public int Login(string email, string password)
@@ -62,7 +53,7 @@ namespace Kebele_Management_System
                 {
                     connection.Open();
 
-                    string query = "SELECT id FROM users WHERE email = @email AND password = @password";
+                    string query = "SELECT id FROM admin WHERE email = @email AND password = @password";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@email", email);
@@ -92,19 +83,6 @@ namespace Kebele_Management_System
             //Console.WriteLine("Login failed. Invalid email or password.");
 
             return -1;
-        }
-
-        private void login_page_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-            AdminLogin adminLogin = new AdminLogin();
-            adminLogin.ShowDialog();
-            
         }
     }
 }

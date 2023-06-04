@@ -135,6 +135,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,12 +192,19 @@
     <Compile Include="RegisteredUsers.Designer.cs">
       <DependentUpon>RegisteredUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuccessPane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessPane.Designer.cs">
+      <DependentUpon>SuccessPane.cs</DependentUpon>
+    </Compile>
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserCertInfo.cs" />
     <Compile Include="UserDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +216,12 @@
     </Compile>
     <Compile Include="User\UC_BirthCert.Designer.cs">
       <DependentUpon>UC_BirthCert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UC_BirthForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\UC_BirthForm.Designer.cs">
+      <DependentUpon>UC_BirthForm.cs</DependentUpon>
     </Compile>
     <Compile Include="User\UC_Home.cs">
       <SubType>UserControl</SubType>
@@ -224,6 +243,9 @@
     <Compile Include="WaitingList.Designer.cs">
       <DependentUpon>WaitingList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPanelForm.resx">
       <DependentUpon>AdminPanelForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +279,9 @@
     <EmbeddedResource Include="RegisteredUsers.resx">
       <DependentUpon>RegisteredUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SuccessPane.resx">
+      <DependentUpon>SuccessPane.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User\UC_BirthCert.resx">
       <DependentUpon>UC_BirthCert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UC_BirthForm.resx">
+      <DependentUpon>UC_BirthForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>

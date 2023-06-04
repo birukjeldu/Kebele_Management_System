@@ -255,13 +255,15 @@ namespace Kebele_Management_System
                         {
                             connection.Open();
                             command.ExecuteNonQuery();
-                            Console.WriteLine("Data inserted successfully!");
-                            MessageBox.Show("You Have Registered Successfully!!");
+                            SuccessPane successPane = new SuccessPane();
+                            successPane.Show();
+                            this.Close();
+                            
                         }
                         catch (Exception ex)
                         {
                             Console.WriteLine("Error inserting data: " + ex.Message);
-                            //MessageBox.Show("Data inserted successfully!!");
+                            
                         }
                         finally
                         {

@@ -221,7 +221,9 @@
             this.Controls.Add(this.mainpane);
             this.Controls.Add(this.panel1);
             this.Name = "AdminPanelForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminPanelForm";
+            this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminPanelForm_FormClosed);
             this.Load += new System.EventHandler(this.AdminPanelForm_Load);
             this.panel1.ResumeLayout(false);
