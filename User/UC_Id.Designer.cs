@@ -68,6 +68,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.panel1);
             this.guna2Panel1.Controls.Add(this.barCodePic);
             this.guna2Panel1.Controls.Add(this.region_lbl);
             this.guna2Panel1.Controls.Add(this.label15);
@@ -88,7 +89,7 @@
             this.guna2Panel1.Controls.Add(this.profilepicture_box);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel1.Location = new System.Drawing.Point(293, 36);
+            this.guna2Panel1.Location = new System.Drawing.Point(293, 68);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2);
@@ -291,7 +292,6 @@
             // profilepicture_box
             // 
             this.profilepicture_box.BorderRadius = 1;
-            this.profilepicture_box.Image = ((System.Drawing.Image)(resources.GetObject("profilepicture_box.Image")));
             this.profilepicture_box.ImageRotate = 0F;
             this.profilepicture_box.Location = new System.Drawing.Point(22, 72);
             this.profilepicture_box.Name = "profilepicture_box";
@@ -328,7 +328,7 @@
             this.panel1.Controls.Add(this.id_lbl);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(721, 36);
+            this.panel1.Location = new System.Drawing.Point(428, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(263, 66);
             this.panel1.TabIndex = 21;
@@ -371,10 +371,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UC_Id";
-            this.Size = new System.Drawing.Size(1223, 434);
+            this.Size = new System.Drawing.Size(1223, 506);
             this.Load += new System.EventHandler(this.UC_Id_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

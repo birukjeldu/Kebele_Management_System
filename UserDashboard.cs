@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Xceed.Wpf.Toolkit.Panels;
 
 
 namespace Kebele_Management_System
@@ -96,8 +97,9 @@ namespace Kebele_Management_System
 
         private void birthButton_Click(object sender, EventArgs e)
         {
-            UC_BirthCert birth = new UC_BirthCert(signedUser);
-            addUserControl(birth);
+            //UC_BirthCert birth = new UC_BirthCert(signedUser);
+            CheckBirthCardVerification(userId);
+            //addUserControl(birth);
         }
 
         private void homeButton_Click(object sender, EventArgs e)
@@ -117,6 +119,42 @@ namespace Kebele_Management_System
         private void UserDashboard_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+
+        private void CheckBirthCardVerification(int userId)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                string query = "SELECT birthcardverification FROM users WHERE id = @Id";
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    // Set the parameter value for the user's ID
+                    command.Parameters.AddWithValue("@Id", userId);
+
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        string birthCardVerification = Convert.ToString(result);
+
+                        if (birthCardVerification != "false")
+                        {
+                            //If Birth Card is verified
+                            UC_BirthCert birth = new UC_BirthCert(signedUser);
+                            addUserControl(birth);
+                        }
+                        else
+                        {
+                            // Birth Card is not verified, show the panel for false condition
+                            UC_BirthForm birthForm = new UC_BirthForm(userId);
+                            addUserControl(birthForm);
+                        }
+                    }
+                }
+            }
         }
     }
 }

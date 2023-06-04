@@ -90,11 +90,11 @@
             this.guna2Panel1.Controls.Add(this.groupBox2);
             this.guna2Panel1.Controls.Add(this.groupBox1);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
-            this.guna2Panel1.Location = new System.Drawing.Point(16, 18);
+            this.guna2Panel1.Location = new System.Drawing.Point(16, 28);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2);
-            this.guna2Panel1.Size = new System.Drawing.Size(1191, 394);
+            this.guna2Panel1.Size = new System.Drawing.Size(1191, 494);
             this.guna2Panel1.TabIndex = 0;
             // 
             // groupBox4
@@ -104,7 +104,7 @@
             this.groupBox4.Controls.Add(this.approvedDate_lbl);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Font = new System.Drawing.Font("Roboto", 14F);
-            this.groupBox4.Location = new System.Drawing.Point(348, 247);
+            this.groupBox4.Location = new System.Drawing.Point(412, 297);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(323, 115);
             this.groupBox4.TabIndex = 24;
@@ -166,7 +166,7 @@
             this.groupBox3.Controls.Add(this.bloodType_lbl);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Font = new System.Drawing.Font("Roboto", 14F);
-            this.groupBox3.Location = new System.Drawing.Point(737, 17);
+            this.groupBox3.Location = new System.Drawing.Point(801, 67);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(323, 183);
             this.groupBox3.TabIndex = 23;
@@ -268,7 +268,7 @@
             this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Font = new System.Drawing.Font("Roboto", 14F);
-            this.groupBox2.Location = new System.Drawing.Point(737, 247);
+            this.groupBox2.Location = new System.Drawing.Point(801, 297);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(323, 118);
             this.groupBox2.TabIndex = 18;
@@ -328,7 +328,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Roboto", 14F);
-            this.groupBox1.Location = new System.Drawing.Point(348, 17);
+            this.groupBox1.Location = new System.Drawing.Point(412, 67);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(323, 213);
             this.groupBox1.TabIndex = 2;
@@ -458,7 +458,7 @@
             this.guna2Panel2.Controls.Add(this.lablb);
             this.guna2Panel2.Controls.Add(this.fullName_lbl);
             this.guna2Panel2.Controls.Add(this.profielImage_box);
-            this.guna2Panel2.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel2.Location = new System.Drawing.Point(35, 53);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(321, 388);
             this.guna2Panel2.TabIndex = 0;
@@ -564,7 +564,6 @@
             // 
             // profielImage_box
             // 
-            this.profielImage_box.Image = ((System.Drawing.Image)(resources.GetObject("profielImage_box.Image")));
             this.profielImage_box.Location = new System.Drawing.Point(25, 3);
             this.profielImage_box.Name = "profielImage_box";
             this.profielImage_box.Size = new System.Drawing.Size(271, 238);
@@ -578,7 +577,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UC_Home";
-            this.Size = new System.Drawing.Size(1223, 434);
+            this.Size = new System.Drawing.Size(1223, 562);
             this.Load += new System.EventHandler(this.UC_Home_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
