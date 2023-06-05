@@ -172,6 +172,7 @@
             // uploadImage_btn
             // 
             this.uploadImage_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.uploadImage_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uploadImage_btn.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadImage_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.uploadImage_btn.Location = new System.Drawing.Point(25, 302);
@@ -1046,6 +1047,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "RegestarationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Regestaration Page";
             this.Load += new System.EventHandler(this.RegestarationForm_Load);
             this.panel1.ResumeLayout(false);

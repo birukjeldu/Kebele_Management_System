@@ -735,9 +735,11 @@
             this.Controls.Add(this.uploadImage_btn);
             this.Controls.Add(this.idPicture);
             this.Controls.Add(this.personalInfo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditPanel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Panel";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.EditPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.idPicture)).EndInit();
             this.personalInfo.ResumeLayout(false);

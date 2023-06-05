@@ -68,7 +68,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 619);
+            this.panel1.Size = new System.Drawing.Size(233, 712);
             this.panel1.TabIndex = 0;
             // 
             // button1
@@ -76,9 +76,9 @@
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Font = new System.Drawing.Font("Roboto", 15F);
+            this.button1.Font = new System.Drawing.Font("Roboto Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(0, 574);
+            this.button1.Location = new System.Drawing.Point(0, 667);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(233, 45);
             this.button1.TabIndex = 8;
@@ -211,14 +211,14 @@
             this.mainpane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpane.Location = new System.Drawing.Point(233, 0);
             this.mainpane.Name = "mainpane";
-            this.mainpane.Size = new System.Drawing.Size(864, 619);
+            this.mainpane.Size = new System.Drawing.Size(864, 712);
             this.mainpane.TabIndex = 1;
             // 
             // AdminPanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1097, 619);
+            this.ClientSize = new System.Drawing.Size(1097, 712);
             this.Controls.Add(this.mainpane);
             this.Controls.Add(this.panel1);
             this.Name = "AdminPanelForm";

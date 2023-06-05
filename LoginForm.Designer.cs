@@ -39,11 +39,11 @@
             this.register_btn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pass_error = new System.Windows.Forms.Label();
             this.email_error = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -175,20 +175,6 @@
             this.panel1.Size = new System.Drawing.Size(996, 635);
             this.panel1.TabIndex = 11;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(914, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 44);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Admin";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pass_error
             // 
             this.pass_error.Location = new System.Drawing.Point(732, 207);
@@ -224,6 +210,20 @@
             this.label5.Size = new System.Drawing.Size(54, 18);
             this.label5.TabIndex = 0;
             this.label5.Text = "E-mail:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.Location = new System.Drawing.Point(914, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 44);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Admin";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // login_page
             // 

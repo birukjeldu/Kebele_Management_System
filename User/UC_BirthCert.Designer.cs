@@ -33,9 +33,9 @@
             this.llabel = new System.Windows.Forms.Label();
             this.firstName_lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.fathersName_lbl = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -110,15 +110,16 @@
             this.panel1.Size = new System.Drawing.Size(1168, 66);
             this.panel1.TabIndex = 22;
             // 
-            // pictureBox1
+            // label3
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(441, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 19);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Birth Certificate";
             // 
             // label2
             // 
@@ -131,16 +132,15 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "የልደት ምስክር ወረቀት";
             // 
-            // label3
+            // pictureBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(441, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 19);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Birth Certificate";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label4
             // 
@@ -397,7 +397,7 @@
             // 
             // guna2Panel1121
             // 
-            this.guna2Panel1121.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1121.BackColor = System.Drawing.Color.White;
             this.guna2Panel1121.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.guna2Panel1121.BorderRadius = 5;
             this.guna2Panel1121.BorderThickness = 1;
