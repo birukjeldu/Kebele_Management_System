@@ -210,6 +210,7 @@
             // additionalBirthCardInfo_btn
             // 
             this.additionalBirthCardInfo_btn.BackColor = System.Drawing.Color.SeaGreen;
+            this.additionalBirthCardInfo_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.additionalBirthCardInfo_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
             this.additionalBirthCardInfo_btn.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.additionalBirthCardInfo_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
