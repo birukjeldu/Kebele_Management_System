@@ -10,17 +10,18 @@ Its a Simple National Id Management System that let user apply to have a natoina
 
 List the main features of the project. Describe each feature briefly and provide any necessary instructions or usage examples.
 
-- Screenshots 1: Simple Login Page.
+- Screenshot 1: Simple Login Page.
 
 ![loginpage](https://github.com/birukjeldu/Kebele_Management_System/assets/69720589/00c4f1a8-0126-4c06-ba59-1474ba79c0b3)
 
 
-- Screenshots 2: Registeration with full Validation.
+- Screenshot 2: Registeration with full Validation.
 
 ![regestaration form](https://github.com/birukjeldu/Kebele_Management_System/assets/69720589/7f3c40f6-de2c-461c-855a-4c0ef933cba2)
 
 
-- Screenshots 3: Final Result of The generated ID.
+- Screenshot 3: Final Result of The generated ID.
+
 ![idCard](https://github.com/birukjeldu/Kebele_Management_System/assets/69720589/ba95143f-0e3f-4d79-95ba-e4a3f4c9443f)
 
 
