@@ -187,6 +187,65 @@ namespace Kebele_Management_System
             return exists;
         }
 
+        internal bool EmailExists_admin(string email)
+        {
+            bool exists = false;
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Check in first table
+                    string query1 = "SELECT COUNT(*) FROM admin WHERE email = @Email";
+                    MySqlCommand command1 = new MySqlCommand(query1, connection);
+                    command1.Parameters.AddWithValue("@Email", email);
+
+                    int count1 = Convert.ToInt32(command1.ExecuteScalar());
+
+                    
+
+                    exists = count1 > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error checking email existence: " + ex.Message);
+            }
+
+            return exists;
+        }
+
+        internal bool EmailExists_adminUpdate(string email, string id)
+        {
+            bool exists = false;
+
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Check in first table
+                    string query1 = "SELECT COUNT(*) FROM admin WHERE email = @Email AND id != @Id";
+                    MySqlCommand command1 = new MySqlCommand(query1, connection);
+                    command1.Parameters.AddWithValue("@Email", email);
+                    command1.Parameters.AddWithValue("@Id", id);
+
+                    int count1 = Convert.ToInt32(command1.ExecuteScalar());
+
+                    exists = count1 > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error checking email existence: " + ex.Message);
+            }
+
+            return exists;
+        }
+
 
 
     }

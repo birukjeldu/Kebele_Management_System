@@ -135,6 +135,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
     <Compile Include="AdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +167,12 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DB_Connection.cs" />
+    <Compile Include="EditAdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAdminPanel.Designer.cs">
+      <DependentUpon>EditAdminPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAdminPanel.resx">
+      <DependentUpon>EditAdminPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditPanel.resx">
       <DependentUpon>EditPanel.cs</DependentUpon>
