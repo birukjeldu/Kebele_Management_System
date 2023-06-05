@@ -48,6 +48,7 @@
             // 
             this.cancel_btn.BackColor = System.Drawing.Color.Crimson;
             this.cancel_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancel_btn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancel_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
             this.cancel_btn.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -183,6 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancel_btn;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -195,10 +197,10 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.update_btn);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditAdminPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditAdminPanel";
+            this.Text = "Edit Admin Data";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);

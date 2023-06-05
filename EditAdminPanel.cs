@@ -94,13 +94,7 @@ namespace Kebele_Management_System
                         connection.Open();
 
                         // Prepare the update query
-                        string updateQuery = @"
-                            UPDATE `kebele_management_system`.`admin`
-                            SET
-                                email = @email,
-                                password = @password,
-                                fullname = @fullname,
-                            WHERE id = @id;";
+                        string updateQuery = "UPDATE admin SET password = @Password, fullname = @FullName, email = @email WHERE id = @id"; ;
 
 
                         // Create a SqlCommand object with the query and connection
@@ -127,7 +121,7 @@ namespace Kebele_Management_System
                 catch (Exception ex)
                 {
                     // Display an error message to the user
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("bitch Error: " + ex.Message);
                 }
             }
 
