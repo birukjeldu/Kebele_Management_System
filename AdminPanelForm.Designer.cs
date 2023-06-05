@@ -74,6 +74,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.Font = new System.Drawing.Font("Roboto", 15F);
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
