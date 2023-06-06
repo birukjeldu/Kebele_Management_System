@@ -470,5 +470,10 @@ namespace Kebele_Management_System
         {
 
         }
+
+        private void firstName_TB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

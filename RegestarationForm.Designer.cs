@@ -907,7 +907,7 @@
             this.birth_year.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.birth_year.Location = new System.Drawing.Point(258, 152);
             this.birth_year.Maximum = new decimal(new int[] {
-            1997,
+            2005,
             0,
             0,
             0});
@@ -920,7 +920,7 @@
             this.birth_year.Size = new System.Drawing.Size(84, 26);
             this.birth_year.TabIndex = 61;
             this.birth_year.Value = new decimal(new int[] {
-            1997,
+            2005,
             0,
             0,
             0});
@@ -1019,6 +1019,7 @@
             this.firstName_TB.Name = "firstName_TB";
             this.firstName_TB.Size = new System.Drawing.Size(186, 28);
             this.firstName_TB.TabIndex = 53;
+            this.firstName_TB.TextChanged += new System.EventHandler(this.firstName_TB_TextChanged);
             // 
             // fullName_label
             // 
