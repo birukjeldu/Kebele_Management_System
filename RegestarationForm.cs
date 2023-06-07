@@ -255,7 +255,7 @@ namespace Kebele_Management_System
                         {
                             connection.Open();
                             command.ExecuteNonQuery();
-                            SuccessPane successPane = new SuccessPane();
+                            SuccessPane successPane = new SuccessPane(emaill);
                             successPane.Show();
                             this.Close();
                             

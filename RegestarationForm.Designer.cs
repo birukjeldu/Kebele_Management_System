@@ -99,6 +99,7 @@
             this.firstName_TB = new System.Windows.Forms.TextBox();
             this.fullName_label = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label40 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -197,6 +198,7 @@
             this.personalInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.personalInfo.Controls.Add(this.label40);
             this.personalInfo.Controls.Add(this.occupation_CB);
             this.personalInfo.Controls.Add(this.register_btn);
             this.personalInfo.Controls.Add(this.label38);
@@ -1039,6 +1041,18 @@
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
             // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Roboto", 10F);
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.label40.Location = new System.Drawing.Point(17, 459);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(98, 17);
+            this.label40.TabIndex = 108;
+            this.label40.Text = "e.g. 2519--------";
+            // 
             // RegestarationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1140,5 +1154,6 @@
         private System.Windows.Forms.PictureBox idPicture;
         private System.Windows.Forms.Button uploadImage_btn;
         private System.Windows.Forms.ComboBox occupation_CB;
+        private System.Windows.Forms.Label label40;
     }
 }
