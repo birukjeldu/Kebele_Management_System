@@ -136,47 +136,47 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
-    <Compile Include="AdminLogin.cs">
+    <Compile Include="Admin\AdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminLogin.Designer.cs">
+    <Compile Include="Admin\AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPanelForm.cs">
+    <Compile Include="Admin\AdminPanelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPanelForm.Designer.cs">
+    <Compile Include="Admin\AdminPanelForm.Designer.cs">
       <DependentUpon>AdminPanelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminSetting.cs">
+    <Compile Include="Admin\AdminSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminSetting.Designer.cs">
+    <Compile Include="Admin\AdminSetting.Designer.cs">
       <DependentUpon>AdminSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="BirthCardForm.cs">
+    <Compile Include="User\BirthCardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BirthCardForm.Designer.cs">
+    <Compile Include="User\BirthCardForm.Designer.cs">
       <DependentUpon>BirthCardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Admin\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="Admin\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DB_Connection.cs" />
-    <Compile Include="EditAdminPanel.cs">
+    <Compile Include="Admin\EditAdminPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditAdminPanel.Designer.cs">
+    <Compile Include="Admin\EditAdminPanel.Designer.cs">
       <DependentUpon>EditAdminPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditPanel.cs">
+    <Compile Include="Admin\EditPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditPanel.Designer.cs">
+    <Compile Include="Admin\EditPanel.Designer.cs">
       <DependentUpon>EditPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
@@ -193,10 +193,10 @@
     <Compile Include="RegestarationForm.Designer.cs">
       <DependentUpon>RegestarationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegisteredUsers.cs">
+    <Compile Include="Admin\RegisteredUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisteredUsers.Designer.cs">
+    <Compile Include="Admin\RegisteredUsers.Designer.cs">
       <DependentUpon>RegisteredUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="SuccessPane.cs">
@@ -212,10 +212,10 @@
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <Compile Include="UserCertInfo.cs" />
-    <Compile Include="UserDashboard.cs">
+    <Compile Include="User\UserDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserDashboard.Designer.cs">
+    <Compile Include="User\UserDashboard.Designer.cs">
       <DependentUpon>UserDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="User\UC_BirthCert.cs">
@@ -244,31 +244,31 @@
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Validator.cs" />
-    <Compile Include="WaitingList.cs">
+    <Compile Include="Admin\WaitingList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WaitingList.Designer.cs">
+    <Compile Include="Admin\WaitingList.Designer.cs">
       <DependentUpon>WaitingList.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminLogin.resx">
+    <EmbeddedResource Include="Admin\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminPanelForm.resx">
+    <EmbeddedResource Include="Admin\AdminPanelForm.resx">
       <DependentUpon>AdminPanelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminSetting.resx">
+    <EmbeddedResource Include="Admin\AdminSetting.resx">
       <DependentUpon>AdminSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BirthCardForm.resx">
+    <EmbeddedResource Include="User\BirthCardForm.resx">
       <DependentUpon>BirthCardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="Admin\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditAdminPanel.resx">
+    <EmbeddedResource Include="Admin\EditAdminPanel.resx">
       <DependentUpon>EditAdminPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditPanel.resx">
+    <EmbeddedResource Include="Admin\EditPanel.resx">
       <DependentUpon>EditPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
@@ -286,7 +286,7 @@
     <EmbeddedResource Include="RegestarationForm.resx">
       <DependentUpon>RegestarationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegisteredUsers.resx">
+    <EmbeddedResource Include="Admin\RegisteredUsers.resx">
       <DependentUpon>RegisteredUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SuccessPane.resx">
@@ -295,7 +295,7 @@
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserDashboard.resx">
+    <EmbeddedResource Include="User\UserDashboard.resx">
       <DependentUpon>UserDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\UC_BirthCert.resx">
@@ -310,7 +310,7 @@
     <EmbeddedResource Include="User\UC_Id.resx">
       <DependentUpon>UC_Id.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WaitingList.resx">
+    <EmbeddedResource Include="Admin\WaitingList.resx">
       <DependentUpon>WaitingList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
