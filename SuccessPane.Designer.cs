@@ -34,6 +34,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.register_btn = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.registerationID_lbl = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -96,7 +99,7 @@
             this.register_btn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonFace;
             this.register_btn.Font = new System.Drawing.Font("Roboto Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.register_btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.register_btn.Location = new System.Drawing.Point(243, 290);
+            this.register_btn.Location = new System.Drawing.Point(236, 323);
             this.register_btn.Name = "register_btn";
             this.register_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.register_btn.Size = new System.Drawing.Size(89, 45);
@@ -105,12 +108,48 @@
             this.register_btn.UseVisualStyleBackColor = false;
             this.register_btn.Click += new System.EventHandler(this.register_btn_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto", 14F);
+            this.label6.ForeColor = System.Drawing.Color.Teal;
+            this.label6.Location = new System.Drawing.Point(250, 118);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(218, 23);
+            this.label6.TabIndex = 108;
+            this.label6.Text = "Pre-registration number: ";
+            // 
+            // registerationID_lbl
+            // 
+            this.registerationID_lbl.AutoSize = true;
+            this.registerationID_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.registerationID_lbl.Font = new System.Drawing.Font("Roboto", 14F);
+            this.registerationID_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.registerationID_lbl.Location = new System.Drawing.Point(458, 118);
+            this.registerationID_lbl.Name = "registerationID_lbl";
+            this.registerationID_lbl.Size = new System.Drawing.Size(37, 23);
+            this.registerationID_lbl.TabIndex = 109;
+            this.registerationID_lbl.Text = "14 ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto Light", 14F);
+            this.label7.Location = new System.Drawing.Point(51, 264);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(491, 23);
+            this.label7.TabIndex = 110;
+            this.label7.Text = "4. Give the Pre-registeration number when asked in kebele";
+            // 
             // SuccessPane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(574, 371);
+            this.ClientSize = new System.Drawing.Size(574, 393);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.registerationID_lbl);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.register_btn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -135,5 +174,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button register_btn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label registerationID_lbl;
+        private System.Windows.Forms.Label label7;
     }
 }
