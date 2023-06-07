@@ -8,7 +8,7 @@ Its a Simple National Id Management System that let user apply to have a natoina
 
 ## Screenshots
 
-List the main features of the project. Describe each feature briefly and provide any necessary instructions or usage examples.
+This are some of the project screenshots for preview
 
 - Screenshot 1: Simple Login Page.
 
