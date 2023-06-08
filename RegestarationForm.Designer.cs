@@ -38,6 +38,7 @@
             this.uploadImage_btn = new System.Windows.Forms.Button();
             this.idPicture = new System.Windows.Forms.PictureBox();
             this.personalInfo = new System.Windows.Forms.GroupBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.occupation_CB = new System.Windows.Forms.ComboBox();
             this.register_btn = new System.Windows.Forms.Button();
             this.label38 = new System.Windows.Forms.Label();
@@ -99,7 +100,6 @@
             this.firstName_TB = new System.Windows.Forms.TextBox();
             this.fullName_label = new System.Windows.Forms.Label();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label40 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -265,6 +265,18 @@
             this.personalInfo.TabStop = false;
             this.personalInfo.Text = "Personal Information";
             this.personalInfo.Enter += new System.EventHandler(this.personalInfo_Enter);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Roboto", 10F);
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.label40.Location = new System.Drawing.Point(17, 459);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(98, 17);
+            this.label40.TabIndex = 108;
+            this.label40.Text = "e.g. 2519--------";
             // 
             // occupation_CB
             // 
@@ -651,6 +663,7 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(186, 28);
             this.password.TabIndex = 82;
+            this.password.UseSystemPasswordChar = true;
             // 
             // label17
             // 
@@ -1040,18 +1053,6 @@
             this.errorProvider.BlinkRate = 100;
             this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider.ContainerControl = this;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Font = new System.Drawing.Font("Roboto", 10F);
-            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.label40.Location = new System.Drawing.Point(17, 459);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(98, 17);
-            this.label40.TabIndex = 108;
-            this.label40.Text = "e.g. 2519--------";
             // 
             // RegestarationForm
             // 
