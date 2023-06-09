@@ -14,7 +14,7 @@ namespace Kebele_Management_System
 {
     public partial class RegisteredUsers : Form
     {
-        //private MySqlConnection connection;
+        
         string connstring = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
         public RegisteredUsers()
         {
@@ -25,7 +25,7 @@ namespace Kebele_Management_System
         {
             try
             {
-                string query = "SELECT * FROM users"; // Replace "YourTableName" with the actual name of your table
+                string query = "SELECT * FROM users"; 
 
                 using (MySqlConnection connection = new MySqlConnection(connstring))
                 {
@@ -38,7 +38,7 @@ namespace Kebele_Management_System
                             DataTable dataTable = new DataTable();
                             adapter.Fill(dataTable);
 
-                            registeredDataGridView.DataSource = dataTable; // dataGridView is the name of your DataGridView control
+                            registeredDataGridView.DataSource = dataTable;
                         }
                     }
                 }

@@ -24,7 +24,7 @@ namespace Kebele_Management_System
         {
             try
             {
-                string query = "SELECT * FROM waiting"; // Replace "YourTableName" with the actual name of your table
+                string query = "SELECT * FROM waiting";
 
                 using (MySqlConnection connection = new MySqlConnection(connstring))
                 {
@@ -37,7 +37,7 @@ namespace Kebele_Management_System
                             DataTable dataTable = new DataTable();
                             adapter.Fill(dataTable);
 
-                            waitingDataGridView.DataSource = dataTable; // dataGridView is the name of your DataGridView control
+                            waitingDataGridView.DataSource = dataTable;
                         }
                     }
                 }

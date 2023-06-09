@@ -54,6 +54,7 @@ namespace Kebele_Management_System
 
             return totalUsersCount;
         }
+        
 
         public int GetWaitingUsersCount()
         {

@@ -86,5 +86,10 @@ namespace Kebele_Management_System
         {
             //Application.Exit();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

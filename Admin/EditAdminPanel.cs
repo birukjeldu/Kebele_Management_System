@@ -32,6 +32,7 @@ namespace Kebele_Management_System
             this.Id = id;
             InitializeComponent();
 
+            //Pre-fill the forms
             fullName_TB.Text = fullName;
             email_TB.Text = email;
             password_TB.Text = password;
@@ -74,7 +75,7 @@ namespace Kebele_Management_System
             //Full Name Validation
             if (v.isEmptyText(fullName_TB.Text))
             {
-                errorProvider.SetError(fullName_TB, "Enter You Full name");
+                errorProvider.SetError(fullName_TB, "Enter Your Full name");
                 allValid = false;
             }
             else { errorProvider.SetError(fullName_TB, null); }
@@ -121,7 +122,7 @@ namespace Kebele_Management_System
                 catch (Exception ex)
                 {
                     // Display an error message to the user
-                    MessageBox.Show("bitch Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
 
