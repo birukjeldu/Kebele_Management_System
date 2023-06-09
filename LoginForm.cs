@@ -40,7 +40,7 @@ namespace Kebele_Management_System
             }
             else
             {
-                email_error.Text = "Invalid email or password";
+                email_error.Text = "Invalid Credential!";
                 email_error.ForeColor = Color.Red;
             }
 
@@ -85,7 +85,7 @@ namespace Kebele_Management_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);               //Console.WriteLine("Error: " + ex.Message);
             }
 
             // Login failed
