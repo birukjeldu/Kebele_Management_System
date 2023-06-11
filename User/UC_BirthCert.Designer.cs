@@ -115,18 +115,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(441, 35);
+            this.label3.Location = new System.Drawing.Point(421, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 19);
             this.label3.TabIndex = 9;
             this.label3.Text = "Birth Certificate";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto Medium", 16F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(418, 7);
+            this.label2.Location = new System.Drawing.Point(398, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 27);
             this.label2.TabIndex = 8;
@@ -397,7 +398,7 @@
             // 
             // guna2Panel1121
             // 
-            this.guna2Panel1121.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1121.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1121.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.guna2Panel1121.BorderRadius = 5;
             this.guna2Panel1121.BorderThickness = 1;

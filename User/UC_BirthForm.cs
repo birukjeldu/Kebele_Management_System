@@ -1,16 +1,8 @@
-﻿using Org.BouncyCastle.Asn1.X509;
+﻿
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using static Humanizer.In;
 
 namespace Kebele_Management_System.User
 {
@@ -18,7 +10,7 @@ namespace Kebele_Management_System.User
     {
         int userId;
         private MySqlConnection connection;
-        private string connectionString = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
+        private string connectionString = DB_Connection.connstring;
         public UC_BirthForm(int userId)
         {
             InitializeComponent();

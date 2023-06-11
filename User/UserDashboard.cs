@@ -1,16 +1,7 @@
 ﻿using Kebele_Management_System.User;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Xceed.Wpf.Toolkit.Panels;
 
 
 namespace Kebele_Management_System
@@ -20,8 +11,8 @@ namespace Kebele_Management_System
     {
         private int userId;
         private Users.RegisteredUser signedUser;
+        private string connectionString = DB_Connection.connstring;
 
-        private string connectionString = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
 
         public Users.RegisteredUser GetUserById(int userId)
         {

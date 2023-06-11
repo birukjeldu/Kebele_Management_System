@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Xceed.Wpf.Toolkit.Panels;
 using MySql.Data.MySqlClient;
 using System.IO;
 
@@ -16,7 +8,7 @@ namespace Kebele_Management_System.User
 {
     public partial class UC_BirthCert : UserControl
     {
-        private string connectionString = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
+        private string connectionString = DB_Connection.connstring;
         Users.RegisteredUser signedUser;
         public UC_BirthCert(Users.RegisteredUser signedUser)
         {
@@ -88,6 +80,11 @@ namespace Kebele_Management_System.User
             }
 
             return userCert;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
