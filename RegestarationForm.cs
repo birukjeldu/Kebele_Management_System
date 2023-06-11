@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Xceed.Wpf.Toolkit;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using MySql.Data.MySqlClient;
 using MessageBox = System.Windows.Forms.MessageBox;
 using System.IO;
@@ -20,7 +12,8 @@ namespace Kebele_Management_System
     {
         //Creating a connnectin to the database 
         private MySqlConnection connection;
-        private string connectionString = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
+        private string connectionString = DB_Connection.connstring;
+
 
         public RegestarationForm()
         {
@@ -446,7 +439,7 @@ namespace Kebele_Management_System
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error reading image file: " + ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
             }
             return imageData;

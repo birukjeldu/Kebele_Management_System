@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
+using System.Data.Common;
 
 namespace Kebele_Management_System
 {
     
     internal class Validator
     {
-        private string connectionString = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
+        
+        private string connectionString = DB_Connection.connstring;
         //isValidName
         internal bool isValidName(string name)
         {
@@ -71,7 +70,7 @@ namespace Kebele_Management_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error checking phone number existence: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
             return exists;
@@ -108,7 +107,7 @@ namespace Kebele_Management_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error checking phone number existence: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
             return exists;
@@ -144,7 +143,7 @@ namespace Kebele_Management_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error checking email existence: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
             return exists;
@@ -181,7 +180,7 @@ namespace Kebele_Management_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error checking email existence: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
             return exists;
@@ -211,7 +210,7 @@ namespace Kebele_Management_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error checking email existence: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
             return exists;
@@ -240,7 +239,7 @@ namespace Kebele_Management_System
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error checking email existence: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
             return exists;

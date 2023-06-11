@@ -32,6 +32,8 @@
             this.kebeleComboBox = new System.Windows.Forms.ComboBox();
             this.zoneComboBox = new System.Windows.Forms.ComboBox();
             this.regionComboBox = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // weredaComboBox
@@ -74,11 +76,20 @@
             this.regionComboBox.TabIndex = 0;
             this.regionComboBox.SelectedIndexChanged += new System.EventHandler(this.regionComboBox_SelectedIndexChanged_1);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(283, 262);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 4;
+            // 
             // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.kebeleComboBox);
             this.Controls.Add(this.weredaComboBox);
             this.Controls.Add(this.zoneComboBox);
@@ -86,6 +97,7 @@
             this.Name = "Test";
             this.Text = "Test";
             this.Load += new System.EventHandler(this.Test_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -96,5 +108,6 @@
         private System.Windows.Forms.ComboBox kebeleComboBox;
         private System.Windows.Forms.ComboBox zoneComboBox;
         private System.Windows.Forms.ComboBox regionComboBox;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

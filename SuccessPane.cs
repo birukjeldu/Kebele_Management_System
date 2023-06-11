@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -14,7 +7,7 @@ namespace Kebele_Management_System
     public partial class SuccessPane : Form
     {
         string email;
-        private string connectionString = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
+        private string connectionString = DB_Connection.connstring;
         public SuccessPane(string email)
         {
             this.email = email;
