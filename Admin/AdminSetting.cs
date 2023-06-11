@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Kebele_Management_System
 {
     public partial class AdminSetting : Form
     {
-        string connstring = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
+       
+        private string connstring = DB_Connection.connstring;
         public AdminSetting()
         {
             InitializeComponent();

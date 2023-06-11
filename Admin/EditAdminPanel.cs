@@ -1,22 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Asn1.X509;
 
 namespace Kebele_Management_System
 {
     public partial class EditAdminPanel : Form
     {
         private MySqlConnection connection;
-        private string connectionString = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
+        private string connectionString = DB_Connection.connstring;
 
         private string Email;
         private string Password;

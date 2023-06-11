@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Google.Protobuf;
 using MySql.Data.MySqlClient;
 
 namespace Kebele_Management_System
@@ -20,7 +13,7 @@ namespace Kebele_Management_System
     {
         //Creating a connnectin to the database 
         private MySqlConnection connection;
-        private string connectionString = "server=localhost;uid=root;pwd=root;database=kebele_management_system";
+        private string connectionString = DB_Connection.connstring;
 
 
         // Declare variables to hold the edited values
