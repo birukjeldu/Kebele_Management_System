@@ -1,0 +1,40 @@
+How to Run the Program
+ - First make sure you have setup the database properly(see the section below)
+ - Then install the packages with their dependecy
+ - Run the program
+ !The admin Login Info 
+    - Email :- admin@gmail.com
+    - Password :- admin
+
+!The database connection string username = root & password = root
+!the connection string is found in the DB_Connection.cs class
+
+How to Setup the database
+ - first create the database with the name 'kebele_management_system'
+ - after that you can import the sql file('KebeleDatabaseFile.sql') in that database
+
+Server Info
+ - MySQL WorkBench version 8.0.33
+
+Editor/IDE
+ - Microsoft Visual Studio Community 2022 (64-bit) 
+
+Packages Used in the Project
+ - Guna.UI2.WinForms version 2.0.4.4
+ - MySql.Data version 8.0.33
+
+
+How to Use the Program
+ - If You are a new user press the register button and fill all the necessary forms
+ - Then after successfuly registering wait until admins approval to login
+ - Once you are approved by the admin you will be able to login
+
+Features of The program
+ - Generate Digital user ID
+ - Generates Digital Birth Certeficate
+ - Enables the Admin to perform basic CRUD(create, read, update, delete) activity
+ - Provides Overall Graphical Statistics Anlaysis of total number of users registers in each region
+
+
+GitHub link for project
+https://github.com/birukjeldu/Kebele_Management_System
