@@ -10,7 +10,7 @@ Its a Simple National Id Management System that let user apply to have a natoina
 
 This are some of the project screenshots for preview
 
-- Screenshot 1: Simple Login Page.
+- Screenshot 1: Simple Login Page
 
 ![loginpage](https://github.com/birukjeldu/Kebele_Management_System/assets/69720589/00c4f1a8-0126-4c06-ba59-1474ba79c0b3)
 
