@@ -2,7 +2,7 @@
 
 Its a Simple National Id Management System that let user apply to have a natoinal id which comes with auto generated birth certeficate. After applying the will wait to be approved by the admin. Once they are approved the users can log in and see his digital id and birht certeficate
 
-## Table of Content
+## Table of Contents
 
 - [Screenshots](#features)
 
