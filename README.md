@@ -6,7 +6,7 @@ It's a Simple National Id Management System that let user apply to have a natoin
 
 - [Screenshots](#features)
 
-## Screenshots
+## Screenshot
 
 This are some of the project screenshots for preview
 
